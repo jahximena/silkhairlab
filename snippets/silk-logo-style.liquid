@@ -1,0 +1,13 @@
+{% comment %}
+  Styles the "Silk" wordmark (header logo text + footer logo text) in an
+  italic serif until the licensed PearHaresh logo font (or a designed logo
+  image) is confirmed and swapped in. See sections/silk-footer.liquid for
+  the footer wordmark.
+{% endcomment %}
+<style>
+  .header-logo {
+    --font-family: var(--font-accent--family) !important;
+    --font-style: italic !important;
+    --font-weight: 500 !important;
+  }
+</style>
