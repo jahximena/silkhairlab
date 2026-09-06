@@ -1,0 +1,45 @@
+<section class="silk-sec silk-quote">
+  <div class="silk-wrap silk-quote-in silk-reveal">
+    <div class="silk-lbl">{{ section.settings.label }}</div>
+    <blockquote><p>{{ section.settings.quote }}</p></blockquote>
+  </div>
+</section>
+
+{% stylesheet %}
+.silk-sec{padding:clamp(84px,11vw,150px) 0;}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+.silk-quote{background:#F6F1EA;text-align:center;}
+.silk-quote-in{max-width:960px;margin:0 auto;}
+.silk-lbl{font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:#8A8E68;}
+.silk-quote blockquote{font-family:var(--font-accent--family);font-style:italic;font-weight:330;font-size:clamp(1.7rem,4vw,3.1rem);line-height:1.28;color:#4F191D;margin-top:26px;}
+.silk-quote blockquote p{max-width:24ch;margin:0 auto;}
+
+.silk-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+.silk-reveal.silk-in{opacity:1;transform:none;}
+@media(max-width:900px){ .silk-wrap{padding-left:24px;padding-right:24px;} }
+@media(prefers-reduced-motion:reduce){ .silk-reveal{opacity:1!important;transform:none!important;transition:none!important;} }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk testimonial",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Label",
+      "default": "Hear from our clients"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "I had been to four different places before Silk. Kelly was the first person who told me what was actually wrong."
+    }
+  ],
+  "presets": [
+    { "name": "Silk testimonial" }
+  ]
+}
+{% endschema %}

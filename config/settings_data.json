@@ -11,10 +11,10 @@
   "current": {
     "logo_height": 36,
     "logo_height_mobile": 28,
-    "type_body_font": "inter_n4",
-    "type_subheading_font": "inter_n5",
-    "type_heading_font": "inter_n7",
-    "type_accent_font": "inter_n7",
+    "type_body_font": "poppins_n4",
+    "type_subheading_font": "poppins_n5",
+    "type_heading_font": "fraunces_n5",
+    "type_accent_font": "fraunces_n5_i",
     "type_size_paragraph": "14",
     "type_line_height_paragraph": "body-loose",
     "type_font_h1": "heading",
@@ -77,21 +77,21 @@
     "palette_input_border": "{{ settings.color_palette.color3 }}",
     "palette_variant_border": "{{ settings.color_palette.color3 }}",
     "color_palette": {
-      "background": "#ffffff",
-      "foreground": "#000000",
-      "color1": "#333333",
-      "color2": "#EEF1EA",
-      "color3": "#DFDFDF"
+      "background": "#F0EAE4",
+      "foreground": "#1C1C18",
+      "color1": "#4F191D",
+      "color2": "#F6F1EA",
+      "color3": "#8A8E68"
     }
   },
   "presets": {
     "Default": {
       "logo_height": 36,
       "logo_height_mobile": 28,
-      "type_body_font": "inter_n4",
-      "type_subheading_font": "inter_n5",
-      "type_heading_font": "inter_n7",
-      "type_accent_font": "inter_n7",
+      "type_body_font": "poppins_n4",
+      "type_subheading_font": "poppins_n5",
+      "type_heading_font": "fraunces_n5",
+      "type_accent_font": "fraunces_n5_i",
       "type_size_paragraph": "14",
       "type_line_height_paragraph": "body-loose",
       "type_font_h1": "heading",
@@ -153,11 +153,11 @@
       "palette_input_border": "{{ settings.color_palette.color3 }}",
       "palette_variant_border": "{{ settings.color_palette.color3 }}",
       "color_palette": {
-        "background": "#ffffff",
-        "foreground": "#000000",
-        "color1": "#333333",
-        "color2": "#EEF1EA",
-        "color3": "#DFDFDF"
+        "background": "#F0EAE4",
+        "foreground": "#1C1C18",
+        "color1": "#4F191D",
+        "color2": "#F6F1EA",
+        "color3": "#8A8E68"
       }
     }
   }

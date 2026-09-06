@@ -1,0 +1,284 @@
+<section id="{{ section.settings.anchor_id | default: 'services' }}" class="silk-services-sec">
+  <div class="silk-svc-top silk-reveal">
+    <h2>{{ section.settings.heading }}</h2>
+    {%- if section.settings.intro != blank -%}
+      <p class="silk-svc-intro">{{ section.settings.intro }}</p>
+    {%- endif -%}
+  </div>
+
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign variant = block.settings.variant
+      assign has_image = false
+      if variant == 'paper' or variant == 'paper_rev'
+        assign has_image = true
+      endif
+      assign layer_class = 'silk-layer silk-' | append: variant | replace: '_rev', ' silk-rev'
+    -%}
+    <div class="{{ layer_class }} silk-reveal" {{ block.shopify_attributes }}>
+      {%- if has_image -%}
+        <div class="silk-im">
+          {%- if block.settings.image -%}
+            {{ block.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400', alt: block.settings.image_alt }}
+          {%- else -%}
+            <img src="{{ block.settings.fallback_asset | asset_url }}" alt="{{ block.settings.image_alt }}" width="{{ block.settings.fallback_width | default: 900 }}" height="{{ block.settings.fallback_height | default: 1200 }}" loading="lazy">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+      <div class="silk-tx">
+        {%- if block.settings.number != blank -%}<div class="silk-no">{{ block.settings.number }}</div>{%- endif -%}
+        <h3>{{ block.settings.title }}</h3>
+        {%- if block.settings.stat != blank -%}<div class="silk-st">{{ block.settings.stat }}</div>{%- endif -%}
+        <div class="silk-lb">{{ block.settings.body }}</div>
+        {%- if block.settings.link_label != blank -%}
+          <a class="silk-tlink silk-lk" href="{{ block.settings.link_url | default: '#book' }}">{{ block.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endfor -%}
+</section>
+
+{% stylesheet %}
+.silk-svc-top{max-width:1280px;margin:0 auto;padding:0 44px clamp(50px,6vw,80px);}
+.silk-svc-top h2{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.02em;color:#4F191D;
+  font-size:clamp(2.6rem,6vw,5rem);margin:0;text-wrap:balance;
+}
+.silk-svc-top h2 em{font-style:italic;}
+.silk-svc-top .silk-svc-intro{margin-top:24px;font-size:clamp(1.05rem,1.7vw,1.28rem);max-width:56ch;color:#3a352f;font-family:var(--font-body--family);font-weight:300;line-height:1.72;}
+
+.silk-layer{display:grid;grid-template-columns:1fr 1fr;min-height:min(80vh,720px);}
+.silk-layer .silk-im{overflow:hidden;background:#ccc2b6;}
+.silk-layer .silk-im img{width:100%;height:100%;object-fit:cover;display:block;}
+.silk-layer .silk-tx{display:flex;flex-direction:column;justify-content:center;padding:clamp(44px,5.5vw,90px);}
+.silk-layer .silk-no{font-family:var(--font-heading--family);font-size:15px;letter-spacing:.05em;}
+.silk-layer h3{font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.02em;font-size:clamp(2rem,3.6vw,3.4rem);margin-top:14px;margin-bottom:0;text-wrap:balance;}
+.silk-layer h3 em{font-style:italic;}
+.silk-layer .silk-st{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.2em;text-transform:uppercase;margin-top:16px;}
+.silk-layer .silk-lb{margin-top:26px;display:grid;gap:14px;max-width:48ch;font-family:var(--font-body--family);}
+.silk-layer .silk-lb p{font-size:15.5px;line-height:1.66;max-width:none;}
+.silk-layer .silk-lk{margin-top:28px;}
+
+.silk-layer.silk-paper{background:#F0EAE4;}
+.silk-layer.silk-paper .silk-no{color:#8A8E68;}
+.silk-layer.silk-paper h3{color:#4F191D;}
+.silk-layer.silk-paper .silk-st{color:#1C1C18;}
+.silk-layer.silk-paper .silk-lb p{color:#3a352f;}
+.silk-layer.silk-paper .silk-lk{color:#4F191D;}
+
+.silk-layer.silk-olive{background:#8A8E68;grid-template-columns:1fr;}
+.silk-layer.silk-olive .silk-tx{max-width:1280px;margin:0 auto;width:100%;padding:clamp(56px,7vw,110px) 44px;}
+.silk-layer.silk-olive .silk-no{color:#33361f;}
+.silk-layer.silk-olive h3{color:#241f18;}
+.silk-layer.silk-olive .silk-st{color:#33361f;}
+.silk-layer.silk-olive .silk-lb{max-width:60ch;}
+.silk-layer.silk-olive .silk-lb p{color:#25231b;}
+.silk-layer.silk-olive .silk-lk{color:#241f18;}
+
+.silk-layer.silk-wineblk{background:#4F191D;grid-template-columns:1fr;}
+.silk-layer.silk-wineblk .silk-tx{max-width:1280px;margin:0 auto;width:100%;padding:clamp(56px,7vw,110px) 44px;}
+.silk-layer.silk-wineblk .silk-no{color:#c9a9a0;}
+.silk-layer.silk-wineblk h3{color:#F0EAE4;}
+.silk-layer.silk-wineblk .silk-st{color:#e7cfc9;}
+.silk-layer.silk-wineblk .silk-lb{max-width:60ch;}
+.silk-layer.silk-wineblk .silk-lb p{color:#ecdfd9;}
+.silk-layer.silk-wineblk .silk-lk{color:#F0EAE4;}
+
+.silk-layer.silk-club{background:#4F191D;grid-template-columns:1fr;}
+.silk-layer.silk-club .silk-tx{max-width:1280px;margin:0 auto;width:100%;padding:clamp(64px,8vw,120px) 44px;text-align:center;align-items:center;}
+.silk-layer.silk-club .silk-no{color:#c9a9a0;}
+.silk-layer.silk-club h3{color:#F0EAE4;font-size:clamp(2.6rem,5.5vw,4.6rem);}
+.silk-layer.silk-club .silk-st{color:#e7cfc9;}
+.silk-layer.silk-club .silk-lb{max-width:52ch;}
+.silk-layer.silk-club .silk-lb p{color:#ecdfd9;}
+.silk-layer.silk-club .silk-lb .silk-price{font-family:var(--font-accent--family);font-style:italic;color:#f2ddd7;}
+.silk-layer.silk-club .silk-lk{color:#F0EAE4;}
+
+.silk-layer.silk-rev .silk-im{order:2;}
+.silk-layer.silk-rev .silk-tx{order:1;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+.silk-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+.silk-reveal.silk-in{opacity:1;transform:none;}
+
+@media(max-width:900px){
+  .silk-svc-top{padding-left:24px;padding-right:24px;}
+  .silk-layer{grid-template-columns:1fr;}
+  .silk-layer .silk-im{min-height:52vh;order:1!important;}
+  .silk-layer .silk-tx{order:2!important;}
+}
+@media(prefers-reduced-motion:reduce){
+  .silk-reveal{opacity:1!important;transform:none!important;transition:none!important;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk services",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "services"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>What we do</p>"
+    },
+    {
+      "type": "text",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "Whether you are here because something is not right or because you just want your hair to look incredible, you start in the same place. A conversation with us."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "layer",
+      "name": "Service layer",
+      "settings": [
+        {
+          "type": "select",
+          "id": "variant",
+          "label": "Layout style",
+          "options": [
+            { "value": "paper", "label": "Image left, paper background" },
+            { "value": "paper_rev", "label": "Image right, paper background" },
+            { "value": "wineblk", "label": "Full width, wine background" },
+            { "value": "olive", "label": "Full width, olive background" },
+            { "value": "club", "label": "Full width, centered, wine background" }
+          ],
+          "default": "paper"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (image layouts only)"
+        },
+        {
+          "type": "text",
+          "id": "fallback_asset",
+          "label": "Fallback asset (leave as-is)",
+          "default": ""
+        },
+        {
+          "type": "number",
+          "id": "fallback_width",
+          "label": "Fallback asset width (leave as-is)"
+        },
+        {
+          "type": "number",
+          "id": "fallback_height",
+          "label": "Fallback asset height (leave as-is)"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "Image alt text"
+        },
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number label",
+          "default": "01"
+        },
+        {
+          "type": "richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "<p>Service <em>title</em></p>"
+        },
+        {
+          "type": "text",
+          "id": "stat",
+          "label": "Small caps subtitle"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Body copy"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label",
+          "default": "Learn more"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk services",
+      "blocks": [
+        {
+          "type": "layer",
+          "settings": {
+            "variant": "paper",
+            "fallback_asset": "silk-service-lab.jpg",
+            "fallback_width": 900,
+            "fallback_height": 1350,
+            "image_alt": "The Silk clinic space",
+            "number": "01",
+            "title": "<p>The Hair <em>Lab</em></p>",
+            "stat": "Hair loss and diagnosis",
+            "body": "<p>Thinning, shedding, breakage, or hair that has never grown past a certain point. Most women are told to try a shampoo and hope. Here you'll get an answer first.</p><p>Your scalp is examined under magnification and your history is taken properly, so you leave knowing what is actually happening and what will really help.</p>",
+            "link_label": "Explore the Hair Lab"
+          }
+        },
+        {
+          "type": "layer",
+          "settings": {
+            "variant": "wineblk",
+            "number": "02",
+            "title": "<p>Scalp <em>Practitioner</em></p>",
+            "stat": "Treatments and scalp health",
+            "body": "<p>Healthy hair starts at the scalp, and most of us have never had ours properly looked after.</p><p>Scalp needling, resurfacing, deep cleansing and treatment plans you follow at home. Clinical work that still feels like being looked after.</p>",
+            "link_label": "Explore scalp treatments"
+          }
+        },
+        {
+          "type": "layer",
+          "settings": {
+            "variant": "paper_rev",
+            "fallback_asset": "silk-service-hairdressing.jpg",
+            "fallback_width": 1100,
+            "fallback_height": 1374,
+            "image_alt": "Freshly coloured, cut hair",
+            "number": "03",
+            "title": "<p><em>Hairdressing</em></p>",
+            "stat": "Colour, cuts and extensions",
+            "body": "<p>Twenty five years of hairdressing. Colour that grows out beautifully, cuts that still work on a Tuesday morning, and extensions we can tell you the exact origin of.</p><p>Four chairs, means you are never being just one of the crowd.</p>",
+            "link_label": "Explore hairdressing"
+          }
+        },
+        {
+          "type": "layer",
+          "settings": {
+            "variant": "club",
+            "number": "04",
+            "title": "<p>The Blow Wave <em>Club</em></p>",
+            "stat": "Miami Friday",
+            "body": "<p>Every Friday, 6.30am to 1.30pm. Come straight from the gym, leave feeling unstoppable.</p><p><span class=\"silk-price\">$199 a month</span> for a blow wave every single Friday in the same slot, plus member pricing across colour, treatments and retail. A standing appointment with yourself.</p>",
+            "link_label": "Join the Blow Wave Club"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,136 @@
+{% liquid
+  assign heading = section.settings.heading
+  assign subheading = section.settings.subheading
+  assign button_label = section.settings.button_label
+  assign button_link = section.settings.button_link
+  assign tlink_label = section.settings.tlink_label
+  assign tlink_link = section.settings.tlink_link
+  assign image = section.settings.image
+%}
+
+<section class="silk-hero" id="{{ section.settings.anchor_id | default: 'top' }}">
+  <div class="silk-hero-bg">
+    {%- if image -%}
+      {{ image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '750,1100,1500,2000,2400', alt: image.alt | default: heading | strip_html }}
+    {%- else -%}
+      <img
+        src="{{ 'silk-hero.jpg' | asset_url }}"
+        alt="{{ heading | strip_html }}"
+        width="1500"
+        height="1000"
+        loading="eager"
+        fetchpriority="high"
+      >
+    {%- endif -%}
+  </div>
+  <div class="silk-wrap silk-hero-in">
+    <h1>{{ heading }}</h1>
+    {%- if subheading != blank -%}
+      <p class="silk-hero-sub">{{ subheading }}</p>
+    {%- endif -%}
+    <div class="silk-hero-actions">
+      {%- if button_label != blank -%}
+        <a class="silk-btn silk-btn-paper" href="{{ button_link | default: '#book' }}">{{ button_label }}</a>
+      {%- endif -%}
+      {%- if tlink_label != blank -%}
+        <a class="silk-tlink" href="{{ tlink_link | default: '#services' }}">{{ tlink_label }} <span class="silk-ar">&rarr;</span></a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+<script src="{{ 'silk-reveal.js' | asset_url }}" defer="defer"></script>
+
+{% stylesheet %}
+.silk-hero{
+  --silk-paper:#F0EAE4; --silk-wine:#4F191D; --silk-ink:#1C1C18;
+  position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#2a1a17;
+}
+.silk-hero-bg{position:absolute;inset:0;z-index:0;}
+.silk-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block;}
+.silk-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,17,15,.42) 0%,rgba(43,20,18,.30) 42%,rgba(43,18,20,.78) 100%);}
+.silk-hero-in{position:relative;z-index:2;width:100%;padding-bottom:clamp(56px,8vw,110px);padding-top:120px;}
+.silk-hero h1{
+  color:var(--silk-paper);font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.025em;
+  font-size:clamp(3.2rem,8.4vw,7.2rem);max-width:15ch;margin:0;text-wrap:balance;
+}
+.silk-hero h1 em{font-style:italic;}
+.silk-hero-sub{color:rgba(240,234,228,.9);font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.05rem,1.7vw,1.4rem);margin-top:28px;max-width:34ch;}
+.silk-hero-actions{display:flex;gap:24px;align-items:center;margin-top:40px;flex-wrap:wrap;}
+.silk-hero-actions .silk-tlink{color:var(--silk-paper);}
+
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+
+.silk-btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 34px;transition:.35s;cursor:pointer;border:1px solid transparent;}
+.silk-btn-paper{background:var(--silk-paper);color:var(--silk-wine);}
+.silk-btn-paper:hover{background:#fff;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk hero",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "top"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Great hair changes <em>everything.</em></p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "A hair studio and scalp clinic on the Gold Coast."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Book an appointment"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "text",
+      "id": "tlink_label",
+      "label": "Secondary link label",
+      "default": "Hair loss and scalp health"
+    },
+    {
+      "type": "url",
+      "id": "tlink_link",
+      "label": "Secondary link URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk hero"
+    }
+  ]
+}
+{% endschema %}

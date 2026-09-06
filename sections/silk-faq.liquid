@@ -1,0 +1,123 @@
+<section id="{{ section.settings.anchor_id | default: 'questions' }}" class="silk-sec">
+  <div class="silk-wrap silk-faq-grid">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="silk-acc silk-reveal">
+      {%- for block in section.blocks -%}
+        <details {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.question }}<span class="silk-pl"></span></summary>
+          <div class="silk-ans">{{ block.settings.answer }}</div>
+        </details>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- if section.blocks.size > 0 -%}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {%- for block in section.blocks -%}
+          {
+            "@type": "Question",
+            "name": {{ block.settings.question | strip_html | json }},
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": {{ block.settings.answer | strip_html | json }}
+            }
+          }{%- unless forloop.last -%},{%- endunless -%}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+{%- endif -%}
+
+{% stylesheet %}
+.silk-sec{padding:clamp(84px,11vw,150px) 0;}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+.silk-faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,6vw,96px);align-items:start;}
+.silk-faq-grid h2{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.02em;color:#1C1C18;
+  font-size:clamp(2.2rem,4.4vw,3.4rem);max-width:11ch;position:sticky;top:120px;margin:0;text-wrap:balance;
+}
+.silk-faq-grid h2 em{font-style:italic;}
+.silk-acc{border-top:1px solid rgba(28,28,24,.16);}
+.silk-acc details{border-bottom:1px solid rgba(28,28,24,.16);}
+.silk-acc summary{
+  list-style:none;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;
+  font-family:var(--font-heading--family);font-size:clamp(1.2rem,2.1vw,1.7rem);color:#1C1C18;font-weight:360;transition:color .25s;
+}
+.silk-acc summary:hover{color:#4F191D;}
+.silk-acc summary::-webkit-details-marker{display:none;}
+.silk-pl{position:relative;width:17px;height:17px;flex:0 0 17px;}
+.silk-pl::before,.silk-pl::after{content:"";position:absolute;background:#8A8E68;}
+.silk-pl::before{top:8px;left:0;width:17px;height:1.5px;}
+.silk-pl::after{left:8px;top:0;height:17px;width:1.5px;transition:.3s;}
+.silk-acc details[open] .silk-pl::after{transform:rotate(90deg);opacity:0;}
+.silk-acc details .silk-ans{padding:0 40px 32px 0;color:#3a352f;font-size:16px;font-family:var(--font-body--family);font-weight:300;max-width:66ch;}
+
+.silk-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+.silk-reveal.silk-in{opacity:1;transform:none;}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+  .silk-faq-grid{grid-template-columns:1fr;gap:26px;}
+  .silk-faq-grid h2{position:static;}
+}
+@media(prefers-reduced-motion:reduce){
+  .silk-reveal{opacity:1!important;transform:none!important;transition:none!important;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk FAQ",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "anchor_id",
+      "label": "Anchor ID",
+      "default": "questions"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>The questions we get <em>most.</em></p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk FAQ",
+      "blocks": [
+        { "type": "faq", "settings": { "question": "Why is my hair falling out?", "answer": "<p>Hair loss has many causes, including stress, illness, hormones, diet, medication and damage from styling. The only way to know which one is yours is to have your scalp and hair properly examined.</p>" } },
+        { "type": "faq", "settings": { "question": "Can hair loss be reversed?", "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. This is exactly what a consultation is for.</p>" } },
+        { "type": "faq", "settings": { "question": "Do I need a consultation before a treatment?", "answer": "<p>Yes. There is no way to know what you need without looking at your scalp first, and we would rather not sell you something you do not need.</p>" } },
+        { "type": "faq", "settings": { "question": "Where do Silk extensions come from?", "answer": "<p>We will tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this.</p>" } },
+        { "type": "faq", "settings": { "question": "What does it cost?", "answer": "<p>Everything is priced individually and you are given a real figure before anything starts. No surprises at the counter.</p>" } },
+        { "type": "faq", "settings": { "question": "Where is Silk Hair Lab?", "answer": "<p>Silk Hair Lab is on the Gold Coast.</p>" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
