@@ -19,8 +19,18 @@
         "button_link": "#book",
         "tlink_label": "Hair loss and scalp health",
         "tlink_link": "#services",
-        "padding_top": 110,
-        "padding_bottom": 100
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "heading_margin_top": 0,
+        "heading_margin_bottom": 0,
+        "button_margin_top": 0,
+        "button_margin_right": 0,
+        "button_margin_bottom": 80,
+        "button_margin_left": 0,
+        "tlink_margin_top": 0,
+        "tlink_margin_right": 0,
+        "tlink_margin_bottom": 80,
+        "tlink_margin_left": 0
       }
     },
     "silk_about": {
