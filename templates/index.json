@@ -261,7 +261,7 @@
         "heading_font": "theme_heading",
         "heading_size_desktop": 4.6,
         "heading_size_mobile": 2.6,
-        "button_bg": "#ffffff",
+        "button_bg": "{{ settings.color_palette.color2 }}",
         "button_bg_hover": "#f0eae4",
         "button_text_color": "#4f191d",
         "button_text_color_hover": "#4f191d"
