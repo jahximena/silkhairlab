@@ -15,14 +15,7 @@
   # formatting was last applied). Since we render our own semantic tag
   # below (per the "Heading tag" setting), strip that wrapper here so
   # we never end up with a heading tag nested inside another one.
-  assign heading_content = section.settings.heading
-    | remove: '<p>' | remove: '</p>'
-    | remove: '<h1>' | remove: '</h1>'
-    | remove: '<h2>' | remove: '</h2>'
-    | remove: '<h3>' | remove: '</h3>'
-    | remove: '<h4>' | remove: '</h4>'
-    | remove: '<h5>' | remove: '</h5>'
-    | remove: '<h6>' | remove: '</h6>'
+  assign heading_content = section.settings.heading | remove: '<p>' | remove: '</p>' | remove: '<h1>' | remove: '</h1>' | remove: '<h2>' | remove: '</h2>' | remove: '<h3>' | remove: '</h3>' | remove: '<h4>' | remove: '</h4>' | remove: '<h5>' | remove: '</h5>' | remove: '<h6>' | remove: '</h6>'
 %}
 
 <section id="{{ section.settings.anchor_id | default: 'book' }}" class="silk-sec silk-book">
