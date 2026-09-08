@@ -27,16 +27,39 @@
     class="silk-wrap silk-hero-in"
     style="--silk-hero-pad-top: {{ section.settings.padding_top | default: 120 }}px; --silk-hero-pad-bottom: {{ section.settings.padding_bottom | default: 90 }}px;"
   >
-    <h1>{{ heading }}</h1>
+    <h1
+      style="
+        margin-top: {{ section.settings.heading_margin_top | default: 0 }}px;
+        margin-bottom: {{ section.settings.heading_margin_bottom | default: 0 }}px;
+      "
+    >{{ heading }}</h1>
     {%- if subheading != blank -%}
       <p class="silk-hero-sub">{{ subheading }}</p>
     {%- endif -%}
     <div class="silk-hero-actions">
       {%- if button_label != blank -%}
-        <a class="silk-btn silk-btn-paper" href="{{ button_link | default: '#book' }}">{{ button_label }}</a>
+        <a
+          class="silk-btn silk-btn-paper"
+          href="{{ button_link | default: '#book' }}"
+          style="
+            margin-top: {{ section.settings.button_margin_top | default: 0 }}px;
+            margin-right: {{ section.settings.button_margin_right | default: 0 }}px;
+            margin-bottom: {{ section.settings.button_margin_bottom | default: 0 }}px;
+            margin-left: {{ section.settings.button_margin_left | default: 0 }}px;
+          "
+        >{{ button_label }}</a>
       {%- endif -%}
       {%- if tlink_label != blank -%}
-        <a class="silk-tlink" href="{{ tlink_link | default: '#services' }}">{{ tlink_label }} <span class="silk-ar">&rarr;</span></a>
+        <a
+          class="silk-tlink"
+          href="{{ tlink_link | default: '#services' }}"
+          style="
+            margin-top: {{ section.settings.tlink_margin_top | default: 0 }}px;
+            margin-right: {{ section.settings.tlink_margin_right | default: 0 }}px;
+            margin-bottom: {{ section.settings.tlink_margin_bottom | default: 0 }}px;
+            margin-left: {{ section.settings.tlink_margin_left | default: 0 }}px;
+          "
+        >{{ tlink_label }} <span class="silk-ar">&rarr;</span></a>
       {%- endif -%}
     </div>
   </div>
@@ -152,6 +175,118 @@
       "step": 10,
       "unit": "px",
       "default": 90
+    },
+    {
+      "type": "header",
+      "content": "Heading margin"
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_top",
+      "label": "Top margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "heading_margin_bottom",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "\"Book an appointment\" button margin"
+    },
+    {
+      "type": "range",
+      "id": "button_margin_top",
+      "label": "Top margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_margin_right",
+      "label": "Right margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_margin_bottom",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "button_margin_left",
+      "label": "Left margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "\"Hair loss and scalp health\" link margin"
+    },
+    {
+      "type": "range",
+      "id": "tlink_margin_top",
+      "label": "Top margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "tlink_margin_right",
+      "label": "Right margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "tlink_margin_bottom",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "tlink_margin_left",
+      "label": "Left margin",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 0
     }
   ],
   "presets": [
