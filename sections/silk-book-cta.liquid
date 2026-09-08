@@ -9,6 +9,20 @@
     else
       assign heading_font_var = '--font-heading--family'
   endcase
+
+  # The heading is stored as rich text, whose editor wraps the whole
+  # value in a single block tag (<p> or <h1>-<h6>, depending on what
+  # formatting was last applied). Since we render our own semantic tag
+  # below (per the "Heading tag" setting), strip that wrapper here so
+  # we never end up with a heading tag nested inside another one.
+  assign heading_content = section.settings.heading
+    | remove: '<p>' | remove: '</p>'
+    | remove: '<h1>' | remove: '</h1>'
+    | remove: '<h2>' | remove: '</h2>'
+    | remove: '<h3>' | remove: '</h3>'
+    | remove: '<h4>' | remove: '</h4>'
+    | remove: '<h5>' | remove: '</h5>'
+    | remove: '<h6>' | remove: '</h6>'
 %}
 
 <section id="{{ section.settings.anchor_id | default: 'book' }}" class="silk-sec silk-book">
@@ -20,13 +34,13 @@
     {%- endcapture -%}
     {%- case heading_tag -%}
       {%- when 'h1' -%}
-        <h1 class="silk-book-heading" style="{{ heading_style }}">{{ section.settings.heading }}</h1>
+        <h1 class="silk-book-heading" style="{{ heading_style }}">{{ heading_content }}</h1>
       {%- when 'h3' -%}
-        <h3 class="silk-book-heading" style="{{ heading_style }}">{{ section.settings.heading }}</h3>
+        <h3 class="silk-book-heading" style="{{ heading_style }}">{{ heading_content }}</h3>
       {%- when 'h4' -%}
-        <h4 class="silk-book-heading" style="{{ heading_style }}">{{ section.settings.heading }}</h4>
+        <h4 class="silk-book-heading" style="{{ heading_style }}">{{ heading_content }}</h4>
       {%- else -%}
-        <h2 class="silk-book-heading" style="{{ heading_style }}">{{ section.settings.heading }}</h2>
+        <h2 class="silk-book-heading" style="{{ heading_style }}">{{ heading_content }}</h2>
     {%- endcase -%}
     {%- if section.settings.body != blank -%}<p>{{ section.settings.body }}</p>{%- endif -%}
     {%- if section.settings.button_label != blank -%}
@@ -35,8 +49,8 @@
           class="silk-btn silk-btn-paper"
           href="{{ section.settings.button_link | default: '#book' }}"
           style="
-            --silk-btn-bg: {{ section.settings.button_bg | default: '#ffffff' }};
-            --silk-btn-bg-hover: {{ section.settings.button_bg_hover | default: '#F0EAE4' }};
+            --silk-btn-bg: {{ section.settings.button_bg | default: '#F0EAE4' }};
+            --silk-btn-bg-hover: {{ section.settings.button_bg_hover | default: '#ffffff' }};
             --silk-btn-text: {{ section.settings.button_text_color | default: '#4F191D' }};
             --silk-btn-text-hover: {{ section.settings.button_text_color_hover | default: '#4F191D' }};
           "
@@ -64,8 +78,8 @@
 .silk-book .silk-call{margin-top:24px;font-size:14px;color:#d8bcb6;}
 
 .silk-btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 34px;transition:.35s;cursor:pointer;border:1px solid transparent;}
-.silk-btn-paper{background:var(--silk-btn-bg, #ffffff);color:var(--silk-btn-text, #4F191D);}
-.silk-btn-paper:hover{background:var(--silk-btn-bg-hover, #F0EAE4);color:var(--silk-btn-text-hover, #4F191D);}
+.silk-btn-paper{background:var(--silk-btn-bg, #F0EAE4);color:var(--silk-btn-text, #4F191D);}
+.silk-btn-paper:hover{background:var(--silk-btn-bg-hover, #ffffff);color:var(--silk-btn-text-hover, #4F191D);}
 
 .silk-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
 .silk-reveal.silk-in{opacity:1;transform:none;}
@@ -172,13 +186,13 @@
       "type": "color",
       "id": "button_bg",
       "label": "Background color",
-      "default": "#FFFFFF"
+      "default": "#F0EAE4"
     },
     {
       "type": "color",
       "id": "button_bg_hover",
       "label": "Background color (hover)",
-      "default": "#F0EAE4"
+      "default": "#FFFFFF"
     },
     {
       "type": "color",
