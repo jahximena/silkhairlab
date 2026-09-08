@@ -256,7 +256,15 @@
         "body": "Whether you have been worried about your hair for years or you just want a really good blow wave, start with a conversation.",
         "button_label": "Book an appointment",
         "button_link": "#book",
-        "footnote": "Or give us a call. We would rather talk to you than take a form."
+        "footnote": "Or give us a call. We would rather talk to you than take a form.",
+        "heading_tag": "h2",
+        "heading_font": "theme_heading",
+        "heading_size_desktop": 6.8,
+        "heading_size_mobile": 2.8,
+        "button_bg": "#f0eae4",
+        "button_bg_hover": "#ffffff",
+        "button_text_color": "#4f191d",
+        "button_text_color_hover": "#4f191d"
       }
     }
   },
