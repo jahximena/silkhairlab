@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "silk_hero": {
@@ -9,7 +18,9 @@
         "button_label": "Book an appointment",
         "button_link": "#book",
         "tlink_label": "Hair loss and scalp health",
-        "tlink_link": "#services"
+        "tlink_link": "#services",
+        "padding_top": 110,
+        "padding_bottom": 100
       }
     },
     "silk_about": {
@@ -26,14 +37,57 @@
     "silk_gallery": {
       "type": "silk-gallery",
       "blocks": {
-        "g1": { "type": "image", "settings": { "alt": "A precision cut in progress", "fallback_asset": "silk-gallery-1.jpg" } },
-        "g2": { "type": "image", "settings": { "alt": "Two finished colours side by side", "fallback_asset": "silk-gallery-2.jpg" } },
-        "g3": { "type": "image", "settings": { "alt": "Hand-placed extensions", "fallback_asset": "silk-gallery-3.jpg" } },
-        "g4": { "type": "image", "settings": { "alt": "Extension wefts matched to tone", "fallback_asset": "silk-gallery-4.jpg" } },
-        "g5": { "type": "image", "settings": { "alt": "A wet cut being shaped", "fallback_asset": "silk-gallery-5.jpg" } },
-        "g6": { "type": "image", "settings": { "alt": "Soft waves after a treatment", "fallback_asset": "silk-gallery-6.jpg" } }
+        "g1": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-1.jpg",
+            "alt": "A precision cut in progress"
+          }
+        },
+        "g2": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-2.jpg",
+            "alt": "Two finished colours side by side"
+          }
+        },
+        "g3": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-3.jpg",
+            "alt": "Hand-placed extensions"
+          }
+        },
+        "g4": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-4.jpg",
+            "alt": "Extension wefts matched to tone"
+          }
+        },
+        "g5": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-5.jpg",
+            "alt": "A wet cut being shaped"
+          }
+        },
+        "g6": {
+          "type": "image",
+          "settings": {
+            "fallback_asset": "silk-gallery-6.jpg",
+            "alt": "Soft waves after a treatment"
+          }
+        }
       },
-      "block_order": ["g1", "g2", "g3", "g4", "g5", "g6"],
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g6"
+      ],
       "settings": {
         "anchor_id": "gallery",
         "heading": "<p>Hair that looks like <em>yours</em>, on a good day.</p>",
@@ -65,6 +119,8 @@
           "type": "layer",
           "settings": {
             "variant": "wineblk",
+            "fallback_asset": "",
+            "image_alt": "",
             "number": "02",
             "title": "<p>Scalp <em>Practitioner</em></p>",
             "stat": "Treatments and scalp health",
@@ -93,6 +149,8 @@
           "type": "layer",
           "settings": {
             "variant": "club",
+            "fallback_asset": "",
+            "image_alt": "",
             "number": "04",
             "title": "<p>The Blow Wave <em>Club</em></p>",
             "stat": "Miami Friday",
@@ -102,7 +160,12 @@
           }
         }
       },
-      "block_order": ["lab", "scalp", "hairdressing", "club"],
+      "block_order": [
+        "lab",
+        "scalp",
+        "hairdressing",
+        "club"
+      ],
       "settings": {
         "anchor_id": "services",
         "heading": "<p>What we do</p>",
@@ -119,14 +182,57 @@
     "silk_faq": {
       "type": "silk-faq",
       "blocks": {
-        "q1": { "type": "faq", "settings": { "question": "Why is my hair falling out?", "answer": "<p>Hair loss has many causes, including stress, illness, hormones, diet, medication and damage from styling. The only way to know which one is yours is to have your scalp and hair properly examined.</p>" } },
-        "q2": { "type": "faq", "settings": { "question": "Can hair loss be reversed?", "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. This is exactly what a consultation is for.</p>" } },
-        "q3": { "type": "faq", "settings": { "question": "Do I need a consultation before a treatment?", "answer": "<p>Yes. There is no way to know what you need without looking at your scalp first, and we would rather not sell you something you do not need.</p>" } },
-        "q4": { "type": "faq", "settings": { "question": "Where do Silk extensions come from?", "answer": "<p>We will tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this.</p>" } },
-        "q5": { "type": "faq", "settings": { "question": "What does it cost?", "answer": "<p>Everything is priced individually and you are given a real figure before anything starts. No surprises at the counter.</p>" } },
-        "q6": { "type": "faq", "settings": { "question": "Where is Silk Hair Lab?", "answer": "<p>Silk Hair Lab is on the Gold Coast.</p>" } }
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "question": "Why is my hair falling out?",
+            "answer": "<p>Hair loss has many causes, including stress, illness, hormones, diet, medication and damage from styling. The only way to know which one is yours is to have your scalp and hair properly examined.</p>"
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "question": "Can hair loss be reversed?",
+            "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. This is exactly what a consultation is for.</p>"
+          }
+        },
+        "q3": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need a consultation before a treatment?",
+            "answer": "<p>Yes. There is no way to know what you need without looking at your scalp first, and we would rather not sell you something you do not need.</p>"
+          }
+        },
+        "q4": {
+          "type": "faq",
+          "settings": {
+            "question": "Where do Silk extensions come from?",
+            "answer": "<p>We will tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this.</p>"
+          }
+        },
+        "q5": {
+          "type": "faq",
+          "settings": {
+            "question": "What does it cost?",
+            "answer": "<p>Everything is priced individually and you are given a real figure before anything starts. No surprises at the counter.</p>"
+          }
+        },
+        "q6": {
+          "type": "faq",
+          "settings": {
+            "question": "Where is Silk Hair Lab?",
+            "answer": "<p>Silk Hair Lab is on the Gold Coast.</p>"
+          }
+        }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
       "settings": {
         "anchor_id": "questions",
         "heading": "<p>The questions we get <em>most.</em></p>"
