@@ -252,7 +252,7 @@
       "type": "silk-book-cta",
       "settings": {
         "anchor_id": "book",
-        "heading": "<p>Come and <em>see</em> us.</p>",
+        "heading": "<h2>Come and <em>see</em> us.</h2>",
         "body": "Whether you have been worried about your hair for years or you just want a really good blow wave, start with a conversation.",
         "button_label": "Book an appointment",
         "button_link": "#book",
@@ -261,10 +261,10 @@
         "heading_font": "theme_heading",
         "heading_size_desktop": 4.6,
         "heading_size_mobile": 2.6,
-        "button_bg": "#FFFFFF",
-        "button_bg_hover": "#F0EAE4",
-        "button_text_color": "#4F191D",
-        "button_text_color_hover": "#4F191D"
+        "button_bg": "{{ settings.color_palette.color2 }}",
+        "button_bg_hover": "#f0eae4",
+        "button_text_color": "#4f191d",
+        "button_text_color_hover": "#4f191d"
       }
     }
   },
