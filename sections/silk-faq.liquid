@@ -1,4 +1,4 @@
-<section id="{{ section.settings.anchor_id | default: 'questions' }}" class="silk-sec">
+<section id="{{ section.settings.anchor_id | default: 'questions' }}" class="silk-sec silk-faq-{{ section.settings.color_scheme | default: 'light' }}">
   <div class="silk-wrap silk-faq-grid">
     <h2>{{ section.settings.heading }}</h2>
     <div class="silk-acc silk-reveal">
@@ -38,24 +38,38 @@
 .silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
 .silk-faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(40px,6vw,96px);align-items:start;}
 .silk-faq-grid h2{
-  font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.02em;color:#1C1C18;
+  font-family:var(--font-heading--family);font-weight:320;line-height:1;letter-spacing:-.02em;
   font-size:clamp(2.2rem,4.4vw,3.4rem);max-width:11ch;position:sticky;top:120px;margin:0;text-wrap:balance;
 }
 .silk-faq-grid h2 em{font-style:italic;}
-.silk-acc{border-top:1px solid rgba(28,28,24,.16);}
-.silk-acc details{border-bottom:1px solid rgba(28,28,24,.16);}
 .silk-acc summary{
   list-style:none;cursor:pointer;padding:28px 0;display:flex;justify-content:space-between;gap:24px;align-items:center;
-  font-family:var(--font-heading--family);font-size:clamp(1.2rem,2.1vw,1.7rem);color:#1C1C18;font-weight:360;transition:color .25s;
+  font-family:var(--font-heading--family);font-size:clamp(1.2rem,2.1vw,1.7rem);font-weight:360;transition:color .25s;
 }
-.silk-acc summary:hover{color:#4F191D;}
 .silk-acc summary::-webkit-details-marker{display:none;}
 .silk-pl{position:relative;width:17px;height:17px;flex:0 0 17px;}
 .silk-pl::before,.silk-pl::after{content:"";position:absolute;background:#8A8E68;}
 .silk-pl::before{top:8px;left:0;width:17px;height:1.5px;}
 .silk-pl::after{left:8px;top:0;height:17px;width:1.5px;transition:.3s;}
 .silk-acc details[open] .silk-pl::after{transform:rotate(90deg);opacity:0;}
-.silk-acc details .silk-ans{padding:0 40px 32px 0;color:#3a352f;font-size:16px;font-family:var(--font-body--family);font-weight:300;max-width:66ch;}
+.silk-acc details .silk-ans{padding:0 40px 32px 0;font-size:16px;font-family:var(--font-body--family);font-weight:300;max-width:66ch;}
+
+/* light (default): paper background, ink text */
+.silk-faq-light .silk-faq-grid h2{color:#1C1C18;}
+.silk-faq-light .silk-acc{border-top:1px solid rgba(28,28,24,.16);}
+.silk-faq-light .silk-acc details{border-bottom:1px solid rgba(28,28,24,.16);}
+.silk-faq-light .silk-acc summary{color:#1C1C18;}
+.silk-faq-light .silk-acc summary:hover{color:#4F191D;}
+.silk-faq-light .silk-acc details .silk-ans{color:#3a352f;}
+
+/* dark: wine-deep background, cream text */
+.silk-faq-dark{background:#3d1216;color:#F0EAE4;}
+.silk-faq-dark .silk-faq-grid h2{color:#F0EAE4;}
+.silk-faq-dark .silk-acc{border-top:1px solid rgba(240,234,228,.2);}
+.silk-faq-dark .silk-acc details{border-bottom:1px solid rgba(240,234,228,.2);}
+.silk-faq-dark .silk-acc summary{color:#F0EAE4;}
+.silk-faq-dark .silk-acc summary:hover{color:#e7cfc9;}
+.silk-faq-dark .silk-acc details .silk-ans{color:rgba(240,234,228,.75);}
 
 .silk-reveal{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
 .silk-reveal.silk-in{opacity:1;transform:none;}
@@ -86,6 +100,16 @@
       "id": "heading",
       "label": "Heading",
       "default": "<p>The questions we get <em>most.</em></p>"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Background",
+      "options": [
+        { "value": "light", "label": "Light (paper)" },
+        { "value": "dark", "label": "Dark (wine)" }
+      ],
+      "default": "light"
     }
   ],
   "blocks": [

@@ -1,0 +1,72 @@
+<section class="silk-sec silk-intro-sec">
+  <div class="silk-wrap silk-intro-grid">
+    <div class="silk-intro-lead">
+      <p>{{ section.settings.lead }}</p>
+    </div>
+    <div class="silk-intro-body">
+      <div class="silk-intro-copy">{{ section.settings.body }}</div>
+      {%- if section.settings.link_label != blank -%}
+        <a class="silk-tlink silk-intro-lk" href="{{ section.settings.link_url | default: '#book' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.silk-sec{padding:clamp(84px,11vw,150px) 0;}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+.silk-intro-grid{display:grid;gap:48px;grid-template-columns:5fr 6fr;}
+.silk-intro-lead p{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1.25;
+  font-size:clamp(1.5rem,3vw,2.25rem);margin:0;max-width:none;text-wrap:balance;
+}
+.silk-intro-copy{font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#3a352f;display:grid;gap:16px;}
+.silk-intro-copy p{margin:0;max-width:none;}
+.silk-intro-lk{margin-top:8px;color:#4F191D;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+  .silk-intro-grid{grid-template-columns:1fr;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk intro split",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "lead",
+      "label": "Lead statement (left column)",
+      "default": "Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body copy (right column)",
+      "default": "<p>We colour, cut, style and extend hair, and we diagnose and treat hair loss and scalp conditions in the same building.</p><p>Most people arrive for one and end up using both, because the two are not separate problems. Your colour sits on your scalp. Your scalp decides what your hair can do.</p><p>Prices below start from. What you actually pay depends on your hair length and how much product it takes, and you get that number before anything begins.</p>"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Book an appointment"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "presets": [
+    { "name": "Silk intro split" }
+  ]
+}
+{% endschema %}

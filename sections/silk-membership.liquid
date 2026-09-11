@@ -1,0 +1,134 @@
+<section class="silk-sec silk-member-sec">
+  <div class="silk-wrap silk-member-in">
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="silk-member-eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
+    <h2>{{ section.settings.heading }}</h2>
+    {%- if section.settings.subheading != blank -%}
+      <h3 class="silk-member-sub">{{ section.settings.subheading }}</h3>
+    {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <div class="silk-member-body">{{ section.settings.body }}</div>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <ul class="silk-member-perks">
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}>{{ block.settings.perk }}</li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+    {%- if section.settings.link_label != blank -%}
+      <a class="silk-tlink silk-member-lk" href="{{ section.settings.link_url | default: '#book' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+    {%- endif -%}
+    {%- if section.settings.footnote != blank -%}
+      <p class="silk-member-footnote">{{ section.settings.footnote }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.silk-sec{padding:clamp(84px,11vw,150px) 0;}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+.silk-member-in{max-width:760px;margin:0 auto;text-align:center;}
+.silk-member-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8A8E68;margin:0;}
+.silk-member-in h2{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1.05;letter-spacing:-.02em;color:#4F191D;
+  font-size:clamp(2.2rem,4vw,3.7rem);margin:20px 0 0;text-wrap:balance;
+}
+.silk-member-in h2 em{font-style:italic;}
+.silk-member-sub{font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.1rem,1.6vw,1.28rem);color:#3a352f;margin-top:16px;}
+.silk-member-body{margin-top:32px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#3a352f;display:grid;gap:16px;}
+.silk-member-body p{margin:0;max-width:none;}
+.silk-member-perks{
+  list-style:none;margin:40px auto 0;padding:32px 0;max-width:420px;
+  border-top:1px solid rgba(28,28,24,.16);border-bottom:1px solid rgba(28,28,24,.16);
+  display:grid;gap:12px;font-family:var(--font-body--family);font-size:14px;color:#3a352f;
+}
+.silk-member-lk{margin-top:40px;color:#4F191D;}
+.silk-member-footnote{margin-top:24px;font-family:var(--font-body--family);font-size:12px;letter-spacing:.06em;color:#6f6a63;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk membership",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow line",
+      "default": "Every Friday, 6.30am to 1.30pm"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Miami <em>Friday.</em></p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Good hair. Good mood. Good Friday."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body copy",
+      "default": "<p>Come straight from the gym. Leave feeling unstoppable.</p><p>$199 a month gets you a blow wave every single Friday, booked into the same slot so it is one less thing to think about. It is a standing appointment with yourself.</p>"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Join the Blow Wave Club"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Footnote",
+      "default": "Limited memberships. Four chairs, one morning a week."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "perk",
+      "name": "Perk",
+      "settings": [
+        {
+          "type": "text",
+          "id": "perk",
+          "label": "Perk text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk membership",
+      "blocks": [
+        { "type": "perk", "settings": { "perk": "A blow wave every Friday" } },
+        { "type": "perk", "settings": { "perk": "20% off the Hair Lab Heads experience" } },
+        { "type": "perk", "settings": { "perk": "15% off any colour service" } },
+        { "type": "perk", "settings": { "perk": "10% off retail" } },
+        { "type": "perk", "settings": { "perk": "One luxury treatment vial" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

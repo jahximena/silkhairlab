@@ -18,7 +18,7 @@
   assign heading_content = section.settings.heading | remove: '<p>' | remove: '</p>' | remove: '<h1>' | remove: '</h1>' | remove: '<h2>' | remove: '</h2>' | remove: '<h3>' | remove: '</h3>' | remove: '<h4>' | remove: '</h4>' | remove: '<h5>' | remove: '</h5>' | remove: '<h6>' | remove: '</h6>'
 %}
 
-<section id="{{ section.settings.anchor_id | default: 'book' }}" class="silk-sec silk-book">
+<section id="{{ section.settings.anchor_id | default: 'book' }}" class="silk-sec silk-book silk-book-{{ section.settings.color_scheme | default: 'wine' }}">
   <div class="silk-wrap silk-book-in silk-reveal">
     {%- capture heading_style -%}
       --silk-book-heading-font: var({{ heading_font_var }});
@@ -59,16 +59,28 @@
 {% stylesheet %}
 .silk-sec{padding:clamp(84px,11vw,150px) 0;}
 .silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
-.silk-book{background:#4F191D;color:#F0EAE4;text-align:center;}
+.silk-book{text-align:center;}
 .silk-book-in{max-width:820px;margin:0 auto;}
 .silk-book .silk-book-heading{
-  font-family:var(--silk-book-heading-font, var(--font-heading--family));font-weight:320;line-height:1;letter-spacing:-.02em;color:#F0EAE4;
+  font-family:var(--silk-book-heading-font, var(--font-heading--family));font-weight:320;line-height:1;letter-spacing:-.02em;
   font-size:var(--silk-book-heading-size, 4.6rem);margin:0;text-wrap:balance;
 }
 .silk-book .silk-book-heading em{font-style:italic;}
-.silk-book p{color:#ecdfd9;font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.05rem,1.7vw,1.28rem);margin:26px auto 0;max-width:44ch;}
+.silk-book p{font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.05rem,1.7vw,1.28rem);margin:26px auto 0;max-width:44ch;}
 .silk-book .silk-cta{margin-top:44px;}
-.silk-book .silk-call{margin-top:24px;font-size:14px;color:#d8bcb6;}
+.silk-book .silk-call{margin-top:24px;font-size:14px;}
+
+/* wine (default): solid wine background, cream text */
+.silk-book-wine{background:#4F191D;color:#F0EAE4;}
+.silk-book-wine .silk-book-heading{color:#F0EAE4;}
+.silk-book-wine p{color:#ecdfd9;}
+.silk-book-wine .silk-call{color:#d8bcb6;}
+
+/* paper: light background, ink/wine text */
+.silk-book-paper{background:#F0EAE4;color:#1C1C18;}
+.silk-book-paper .silk-book-heading{color:#4F191D;}
+.silk-book-paper p{color:#3a352f;}
+.silk-book-paper .silk-call{color:#6f6a63;}
 
 .silk-btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:17px 34px;transition:.35s;cursor:pointer;border:1px solid transparent;}
 .silk-book-btn{background:var(--silk-book-btn-bg, #F0EAE4);color:var(--silk-book-btn-text, #4F191D);}
@@ -122,6 +134,16 @@
       "id": "footnote",
       "label": "Footnote",
       "default": "Or give us a call. We would rather talk to you than take a form."
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Background",
+      "options": [
+        { "value": "wine", "label": "Wine (dark)" },
+        { "value": "paper", "label": "Paper (light)" }
+      ],
+      "default": "wine"
     },
     {
       "type": "header",

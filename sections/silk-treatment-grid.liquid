@@ -1,0 +1,98 @@
+<section class="silk-sec silk-tgrid-sec">
+  <div class="silk-wrap">
+    <div class="silk-tgrid">
+      {%- for block in section.blocks -%}
+        <div class="silk-tgrid-item" {{ block.shopify_attributes }}>
+          <h3>{{ block.settings.title }}</h3>
+          <p class="silk-tgrid-eyebrow">{{ block.settings.eyebrow }}</p>
+          <div class="silk-tgrid-body">{{ block.settings.body }}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.link_label != blank -%}
+      <a class="silk-tlink silk-tgrid-lk" href="{{ section.settings.link_url | default: '#book' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+    {%- endif -%}
+  </div>
+</section>
+
+{% stylesheet %}
+.silk-sec{padding:clamp(84px,11vw,150px) 0;}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+.silk-tgrid{display:grid;grid-template-columns:1fr 1fr;gap:40px 48px;}
+.silk-tgrid-item h3{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1.15;
+  font-size:clamp(1.4rem,2vw,1.8rem);margin:0;text-wrap:balance;
+}
+.silk-tgrid-eyebrow{
+  font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:#4F191D;margin:12px 0 0;
+}
+.silk-tgrid-body{margin-top:16px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#3a352f;}
+.silk-tgrid-body p{margin:0;max-width:none;}
+.silk-tgrid-lk{margin-top:56px;color:#4F191D;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+  .silk-tgrid{grid-template-columns:1fr;gap:36px;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk treatment grid",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Book the Diagnostic Ritual"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "treatment",
+      "name": "Treatment",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Price / duration line"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk treatment grid",
+      "blocks": [
+        { "type": "treatment", "settings": { "title": "The Diagnostic Ritual", "eyebrow": "From $150. 45 minutes." } },
+        { "type": "treatment", "settings": { "title": "The Cellular Renewal Scalp Facial", "eyebrow": "From $350. 1 hour." } },
+        { "type": "treatment", "settings": { "title": "The Follicle Infusion Therapy", "eyebrow": "From $450. 1 hour." } },
+        { "type": "treatment", "settings": { "title": "The Comprehensive Hair and Scalp Restoration Program", "eyebrow": "16 weeks. $500 deposit, then $200 a week for 15 weeks." } }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,255 @@
+{%- liquid
+  assign has_image = false
+  if section.settings.image != blank or section.settings.fallback_asset != blank
+    assign has_image = true
+  endif
+-%}
+<section class="silk-plist-sec silk-plist-{{ section.settings.variant }}{% if has_image %} silk-plist-has-image{% endif %}{% if has_image and section.settings.image_position == 'right' %} silk-plist-imgright{% endif %}">
+  {%- if has_image -%}
+    <div class="silk-plist-im">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400' }}
+      {%- else -%}
+        <img
+          src="{{ section.settings.fallback_asset | asset_url }}"
+          alt="{{ section.settings.fallback_alt }}"
+          width="{{ section.settings.fallback_width | default: 1200 }}"
+          height="{{ section.settings.fallback_height | default: 1500 }}"
+          loading="lazy"
+        >
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+  <div class="silk-plist-body">
+    <div class="silk-wrap silk-plist-in">
+      <div class="silk-plist-grid{% if has_image %} silk-plist-grid-narrow{% endif %}">
+        <div class="silk-plist-head">
+          <h2>{{ section.settings.heading }}</h2>
+          {%- if section.settings.subheading != blank -%}
+            <h3 class="silk-plist-sub">{{ section.settings.subheading }}</h3>
+          {%- endif -%}
+          {%- if section.settings.intro != blank -%}
+            <div class="silk-plist-intro">{{ section.settings.intro }}</div>
+          {%- endif -%}
+          {%- if section.settings.secondary_heading != blank -%}
+            <div class="silk-plist-secondary">
+              <h3>{{ section.settings.secondary_heading }}</h3>
+              <div class="silk-plist-intro">{{ section.settings.secondary_body }}</div>
+            </div>
+          {%- endif -%}
+        </div>
+        <div class="silk-plist-list-col">
+          {%- if section.blocks.size > 0 -%}
+            <ul class="silk-plist-ul">
+              {%- for block in section.blocks -%}
+                <li {{ block.shopify_attributes }}>
+                  <span class="silk-plist-name">{{ block.settings.name }}</span>
+                  <span class="silk-plist-price">{{ block.settings.price }}</span>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+          {%- if section.settings.footnote != blank -%}
+            <p class="silk-plist-footnote">{{ section.settings.footnote }}</p>
+          {%- endif -%}
+          {%- if section.settings.link_label != blank -%}
+            <a class="silk-tlink silk-plist-lk" href="{{ section.settings.link_url | default: '#book' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+.silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
+
+.silk-plist-sec{display:grid;grid-template-columns:1fr;}
+.silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr 1fr;}
+.silk-plist-sec.silk-plist-imgright .silk-plist-im{order:2;}
+.silk-plist-sec.silk-plist-imgright .silk-plist-body{order:1;}
+.silk-plist-im{overflow:hidden;background:#ccc2b6;}
+.silk-plist-im img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px;}
+.silk-plist-body{display:flex;align-items:center;}
+.silk-plist-in{padding:clamp(56px,7vw,110px) 0;width:100%;}
+
+.silk-plist-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,5vw,80px);}
+.silk-plist-grid-narrow{grid-template-columns:1fr;gap:32px;}
+
+.silk-plist-head h2{
+  font-family:var(--font-heading--family);font-weight:320;line-height:1.05;letter-spacing:-.02em;
+  font-size:clamp(2.2rem,4vw,3.7rem);margin:0;text-wrap:balance;
+}
+.silk-plist-head h2 em{font-style:italic;}
+.silk-plist-sub{font-family:var(--font-heading--family);font-weight:340;font-size:clamp(1.1rem,1.6vw,1.28rem);line-height:1.3;margin-top:16px;opacity:.8;}
+.silk-plist-intro{margin-top:20px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;}
+.silk-plist-intro p{margin:0 0 16px;max-width:none;}
+.silk-plist-intro p:last-child{margin-bottom:0;}
+.silk-plist-secondary{margin-top:40px;}
+.silk-plist-secondary h3{font-family:var(--font-heading--family);font-weight:320;font-size:1.5rem;margin:0;}
+
+.silk-plist-ul{list-style:none;margin:0;padding:0;border-top:1px solid;}
+.silk-plist-ul li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding:16px 0;border-bottom:1px solid;}
+.silk-plist-name{font-family:var(--font-heading--family);font-weight:340;font-size:1.25rem;}
+.silk-plist-price{font-family:var(--font-body--family);font-size:12px;letter-spacing:.1em;}
+.silk-plist-footnote{margin-top:20px;font-family:var(--font-body--family);font-size:12px;letter-spacing:.05em;}
+.silk-plist-lk{margin-top:28px;}
+
+.silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
+.silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
+.silk-tlink:hover::after{transform:scaleX(0);transform-origin:left;}
+.silk-tlink .silk-ar{transition:transform .35s;}
+.silk-tlink:hover .silk-ar{transform:translateX(4px);}
+
+/* paper variant (light bg) */
+.silk-plist-paper{background:#F0EAE4;color:#1C1C18;}
+.silk-plist-paper .silk-plist-head h2{color:#4F191D;}
+.silk-plist-paper .silk-plist-intro{color:#3a352f;}
+.silk-plist-paper .silk-plist-secondary h3{color:#1C1C18;}
+.silk-plist-paper .silk-plist-ul{border-color:rgba(28,28,24,.16);}
+.silk-plist-paper .silk-plist-ul li{border-color:rgba(28,28,24,.16);}
+.silk-plist-paper .silk-plist-price{color:#6f6a63;}
+.silk-plist-paper .silk-plist-footnote{color:#6f6a63;}
+.silk-plist-paper .silk-plist-lk{color:#4F191D;}
+
+/* wine variant (dark bg) */
+.silk-plist-wine{background:#4F191D;color:#F0EAE4;}
+.silk-plist-wine .silk-plist-head h2{color:#F0EAE4;}
+.silk-plist-wine .silk-plist-sub{color:#F0EAE4;}
+.silk-plist-wine .silk-plist-intro{color:#e7dbd4;}
+.silk-plist-wine .silk-plist-secondary h3{color:#F0EAE4;}
+.silk-plist-wine .silk-plist-ul{border-color:rgba(240,234,228,.25);}
+.silk-plist-wine .silk-plist-ul li{border-color:rgba(240,234,228,.25);}
+.silk-plist-wine .silk-plist-price{color:rgba(240,234,228,.7);}
+.silk-plist-wine .silk-plist-footnote{color:rgba(240,234,228,.7);}
+.silk-plist-wine .silk-plist-lk{color:#F0EAE4;}
+
+@media(max-width:900px){
+  .silk-wrap{padding-left:24px;padding-right:24px;}
+  .silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr;}
+  .silk-plist-im img{min-height:52vh;}
+  .silk-plist-sec.silk-plist-imgright .silk-plist-im{order:1;}
+  .silk-plist-sec.silk-plist-imgright .silk-plist-body{order:2;}
+  .silk-plist-grid{grid-template-columns:1fr;}
+}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Silk price list",
+  "tag": "section",
+  "class": "silk-plist-outer",
+  "settings": [
+    {
+      "type": "select",
+      "id": "variant",
+      "label": "Background",
+      "options": [
+        { "value": "paper", "label": "Paper (light)" },
+        { "value": "wine", "label": "Wine (dark)" }
+      ],
+      "default": "paper"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image (optional)"
+    },
+    {
+      "type": "text",
+      "id": "fallback_asset",
+      "label": "Fallback asset (leave as-is)"
+    },
+    {
+      "type": "text",
+      "id": "fallback_alt",
+      "label": "Fallback image alt text"
+    },
+    {
+      "type": "number",
+      "id": "fallback_width",
+      "label": "Fallback asset width (leave as-is)"
+    },
+    {
+      "type": "number",
+      "id": "fallback_height",
+      "label": "Fallback asset height (leave as-is)"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<p>Service name</p>"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro copy"
+    },
+    {
+      "type": "text",
+      "id": "secondary_heading",
+      "label": "Secondary heading (optional)"
+    },
+    {
+      "type": "richtext",
+      "id": "secondary_body",
+      "label": "Secondary body copy (optional)"
+    },
+    {
+      "type": "text",
+      "id": "footnote",
+      "label": "Footnote below the price list (optional)"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link label",
+      "default": "Book an appointment"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "price_item",
+      "name": "Price item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Service name"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price / detail line"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Silk price list"
+    }
+  ]
+}
+{% endschema %}
