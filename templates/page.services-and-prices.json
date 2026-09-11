@@ -20,7 +20,7 @@
         "button_link": "",
         "tlink_label": "",
         "tlink_link": "",
-        "padding_top": 120,
+        "padding_top": 130,
         "padding_bottom": 60,
         "heading_margin_top": 0,
         "heading_margin_bottom": 0,
@@ -47,6 +47,7 @@
       "type": "silk-price-list",
       "settings": {
         "variant": "wine",
+        "image": "shopify://shop_images/Hair_loss_and_scalp_health.jpg",
         "fallback_asset": "silk-service-lab.jpg",
         "fallback_alt": "Scalp examined under magnification at the Hair Lab",
         "fallback_width": 1200,
@@ -194,6 +195,7 @@
       ],
       "settings": {
         "variant": "paper",
+        "image": "shopify://shop_images/Blow_waves_and_styling.jpg",
         "fallback_asset": "silk-gallery-6.jpg",
         "fallback_alt": "Soft waves after a blow wave treatment",
         "fallback_width": 736,
