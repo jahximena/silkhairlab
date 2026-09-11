@@ -181,14 +181,14 @@
       "type": "silk-faq",
       "blocks": {
         "q1": { "type": "faq", "settings": { "question": "How much does a haircut cost at Silk Hair Lab?", "answer": "<p>A wash, cut and blow wave starts at $130 and a basic trim without a wash starts at $85. The price depends on your hair length, and you are given the exact figure before we begin.</p>" } },
-        "q2": { "type": "faq", "settings": { "question": "Why did my colour cost more than the price listed?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q3": { "type": "faq", "settings": { "question": "How long does a full head of foils take?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q4": { "type": "faq", "settings": { "question": "Do I need a consultation before colour or extensions?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q5": { "type": "faq", "settings": { "question": "Where does Silk Hair Lab get its extensions?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q6": { "type": "faq", "settings": { "question": "What is trichology?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q7": { "type": "faq", "settings": { "question": "Do I need the Diagnostic Ritual before a scalp treatment?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q8": { "type": "faq", "settings": { "question": "Can hair loss be reversed?", "answer": "<p>TBD — answer to be provided.</p>" } },
-        "q9": { "type": "faq", "settings": { "question": "Where is Silk Hair Lab?", "answer": "<p>TBD — answer to be provided.</p>" } }
+        "q2": { "type": "faq", "settings": { "question": "Why did my colour cost more than the price listed?", "answer": "<p>Colour prices are based on a standard measure of product. If your hair is thick, long, or the regrowth is further out, it takes more colour, and the extra is weighed on our Vish scales and added at the counter. We tell you before we start, not after.</p>" } },
+        "q3": { "type": "faq", "settings": { "question": "How long does a full head of foils take?", "answer": "<p>About 90 minutes, plus a 45 minute gap afterwards for processing and finishing. Allow the better part of a morning.</p>" } },
+        "q4": { "type": "faq", "settings": { "question": "Do I need a consultation before colour or extensions?", "answer": "<p>Yes, if you are changing direction, going blonde, or having extensions fitted for the first time. There is no way to price or plan those properly without seeing your hair.</p>" } },
+        "q5": { "type": "faq", "settings": { "question": "Where does Silk Hair Lab get its extensions?", "answer": "<p>We can tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this, and you are entitled to know.</p>" } },
+        "q6": { "type": "faq", "settings": { "question": "What is trichology?", "answer": "<p>Trichology is the science of hair and scalp health. It covers why hair grows, why it stops, and what can be done about shedding, thinning and scalp conditions.</p>" } },
+        "q7": { "type": "faq", "settings": { "question": "Do I need the Diagnostic Ritual before a scalp treatment?", "answer": "<p>Yes. There is no way to know which treatment you need without looking at your scalp under magnification first, and we would rather not sell you something that will not work.</p>" } },
+        "q8": { "type": "faq", "settings": { "question": "Can hair loss be reversed?", "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. The Diagnostic Ritual is how we find out which one you have.</p>" } },
+        "q9": { "type": "faq", "settings": { "question": "Where is Silk Hair Lab?", "answer": "<p>Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.</p>" } }
       },
       "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"],
       "settings": {
