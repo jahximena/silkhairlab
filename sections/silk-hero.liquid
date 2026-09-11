@@ -6,12 +6,13 @@
   assign tlink_label = section.settings.tlink_label
   assign tlink_link = section.settings.tlink_link
   assign image = section.settings.image
+  assign image_alt = image.alt | default: heading | strip_html
 %}
 
 <section class="silk-hero" id="{{ section.settings.anchor_id | default: 'top' }}">
   <div class="silk-hero-bg">
     {%- if image -%}
-      {{ image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '750,1100,1500,2000,2400', alt: image.alt | default: heading | strip_html }}
+      {{ image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '750,1100,1500,2000,2400', alt: image_alt }}
     {%- else -%}
       <img
         src="{{ 'silk-hero.jpg' | asset_url }}"

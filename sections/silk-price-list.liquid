@@ -8,7 +8,7 @@
   {%- if has_image -%}
     <div class="silk-plist-im">
       {%- if section.settings.image != blank -%}
-        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400' }}
+        {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400', alt: section.settings.fallback_alt }}
       {%- else -%}
         <img
           src="{{ section.settings.fallback_asset | asset_url }}"

@@ -1,7 +1,7 @@
 <section id="{{ section.settings.anchor_id | default: 'about' }}" class="silk-split">
   <div class="silk-imgcol silk-reveal">
     {%- if section.settings.image -%}
-      {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400' }}
+      {{ section.settings.image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400', alt: section.settings.image_alt }}
     {%- else -%}
       <img src="{{ 'silk-founder.jpg' | asset_url }}" alt="{{ section.settings.image_alt }}" width="950" height="1187" loading="lazy">
     {%- endif -%}
