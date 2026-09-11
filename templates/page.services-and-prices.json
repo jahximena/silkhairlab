@@ -1,14 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
+        "image": "shopify://shop_images/services-hero-CjlwIV2I.jpg",
         "heading": "<p>Services and <em>Prices</em></p>",
         "subheading": "Everything your hair needs, in one room.",
         "button_label": "",
+        "button_link": "",
         "tlink_label": "",
-        "padding_bottom": 60
+        "tlink_link": "",
+        "padding_top": 120,
+        "padding_bottom": 60,
+        "heading_margin_top": 0,
+        "heading_margin_bottom": 0,
+        "button_margin_top": 0,
+        "button_margin_right": 0,
+        "button_margin_bottom": 0,
+        "button_margin_left": 0,
+        "tlink_margin_top": 0,
+        "tlink_margin_right": 0,
+        "tlink_margin_bottom": 0,
+        "tlink_margin_left": 0
       }
     },
     "intro": {
@@ -31,18 +54,56 @@
         "image_position": "left",
         "heading": "<p>Hair loss and scalp <em>health</em></p>",
         "subheading": "Start with an answer, not a product.",
-        "intro": "<p>If your hair is shedding, thinning, breaking, or has simply never grown past a certain point, there is a reason. Most people are handed a shampoo and told to be patient. That is not a plan.</p><p>At the Hair Lab your scalp is examined under magnification and your history is taken properly. You leave knowing what is happening, why it is happening, and what will genuinely help.</p>"
+        "intro": "<p>If your hair is shedding, thinning, breaking, or has simply never grown past a certain point, there is a reason. Most people are handed a shampoo and told to be patient. That is not a plan.</p><p>At the Hair Lab your scalp is examined under magnification and your history is taken properly. You leave knowing what is happening, why it is happening, and what will genuinely help.</p>",
+        "secondary_heading": "",
+        "secondary_body": "",
+        "footnote": "",
+        "link_label": "Book an appointment",
+        "link_url": ""
       }
     },
     "treatments": {
       "type": "silk-treatment-grid",
       "blocks": {
-        "t1": { "type": "treatment", "settings": { "title": "The Diagnostic Ritual", "eyebrow": "From $150. 45 minutes.", "body": "<p>A microscopic evaluation of your scalp and follicles. We look at the biological drivers behind shedding, sensitivity or imbalance, and you go home with a written plan for what to do about it. The $150 comes back off your treatment plan when you book one.</p>" } },
-        "t2": { "type": "treatment", "settings": { "title": "The Cellular Renewal Scalp Facial", "eyebrow": "From $350. 1 hour.", "body": "<p>A deep scalp detox for buildup, stubborn sebum and micro inflammation, using our hydro dermabrasion machine. Exfoliation, extraction, a targeted nourishment infusion, and a scalp massage that undoes about six months of tension.</p>" } },
-        "t3": { "type": "treatment", "settings": { "title": "The Follicle Infusion Therapy", "eyebrow": "From $450. 1 hour.", "body": "<p>A regenerative treatment aimed at circulation and dormant roots. Medical grade actives are delivered into the dermis to build density and support stronger growth from the source.</p>" } },
-        "t4": { "type": "treatment", "settings": { "title": "The Comprehensive Hair and Scalp Restoration Program", "eyebrow": "16 weeks. $500 deposit, then $200 a week for 15 weeks.", "body": "<p>Our full reset. A complete diagnostic scan, then a corrective treatment built for your scalp, delivered weekly for sixteen weeks, alongside a home care routine you actually follow. This is a serious option, and it is not for everybody. The Diagnostic Ritual tells us whether you need it.</p>" } }
+        "t1": {
+          "type": "treatment",
+          "settings": {
+            "title": "The Diagnostic Ritual",
+            "eyebrow": "From $150. 45 minutes.",
+            "body": "<p>A microscopic evaluation of your scalp and follicles. We look at the biological drivers behind shedding, sensitivity or imbalance, and you go home with a written plan for what to do about it. The $150 comes back off your treatment plan when you book one.</p>"
+          }
+        },
+        "t2": {
+          "type": "treatment",
+          "settings": {
+            "title": "The Cellular Renewal Scalp Facial",
+            "eyebrow": "From $350. 1 hour.",
+            "body": "<p>A deep scalp detox for buildup, stubborn sebum and micro inflammation, using our hydro dermabrasion machine. Exfoliation, extraction, a targeted nourishment infusion, and a scalp massage that undoes about six months of tension.</p>"
+          }
+        },
+        "t3": {
+          "type": "treatment",
+          "settings": {
+            "title": "The Follicle Infusion Therapy",
+            "eyebrow": "From $450. 1 hour.",
+            "body": "<p>A regenerative treatment aimed at circulation and dormant roots. Medical grade actives are delivered into the dermis to build density and support stronger growth from the source.</p>"
+          }
+        },
+        "t4": {
+          "type": "treatment",
+          "settings": {
+            "title": "The Comprehensive Hair and Scalp Restoration Program",
+            "eyebrow": "16 weeks. $500 deposit, then $200 a week for 15 weeks.",
+            "body": "<p>Our full reset. A complete diagnostic scan, then a corrective treatment built for your scalp, delivered weekly for sixteen weeks, alongside a home care routine you actually follow. This is a serious option, and it is not for everybody. The Diagnostic Ritual tells us whether you need it.</p>"
+          }
+        }
       },
-      "block_order": ["t1", "t2", "t3", "t4"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
       "settings": {
         "link_label": "Book the Diagnostic Ritual",
         "link_url": "#book"
@@ -51,15 +112,36 @@
     "cutting": {
       "type": "silk-price-list",
       "blocks": {
-        "c1": { "type": "price_item", "settings": { "name": "Wash, cut and blow wave", "price": "from $130 · 45–75 min" } },
-        "c2": { "type": "price_item", "settings": { "name": "Basic trim, no wash", "price": "from $85 · 30–45 min" } }
+        "c1": {
+          "type": "price_item",
+          "settings": {
+            "name": "Wash, cut and blow wave",
+            "price": "from $130 · 45–75 min"
+          }
+        },
+        "c2": {
+          "type": "price_item",
+          "settings": {
+            "name": "Basic trim, no wash",
+            "price": "from $85 · 30–45 min"
+          }
+        }
       },
-      "block_order": ["c1", "c2"],
+      "block_order": [
+        "c1",
+        "c2"
+      ],
       "settings": {
         "variant": "wine",
+        "fallback_asset": "",
+        "fallback_alt": "",
+        "image_position": "left",
         "heading": "<p>Cutting</p>",
         "subheading": "A cut that still works on a Tuesday.",
         "intro": "<p>Anyone can make hair look good the moment you stand up out of the chair. The test is the third morning, when you are doing it yourself in a hurry.</p><p>We cut to how your hair actually grows and to how much time you actually have.</p>",
+        "secondary_heading": "",
+        "secondary_body": "",
+        "footnote": "",
         "link_label": "Book a cut",
         "link_url": "#book"
       }
@@ -67,13 +149,49 @@
     "blowwave": {
       "type": "silk-price-list",
       "blocks": {
-        "b1": { "type": "price_item", "settings": { "name": "Wash and blow wave", "price": "from $65 · curled, straightened or roller" } },
-        "b2": { "type": "price_item", "settings": { "name": "Curls, tongs or straightening", "price": "from $45 · dry hair" } },
-        "b3": { "type": "price_item", "settings": { "name": "Upstyling", "price": "from $100 · 45–75 min" } },
-        "b4": { "type": "price_item", "settings": { "name": "Half upstyle or pin up", "price": "$30 add on" } },
-        "b5": { "type": "price_item", "settings": { "name": "Extensions add on", "price": "from $10" } }
+        "b1": {
+          "type": "price_item",
+          "settings": {
+            "name": "Wash and blow wave",
+            "price": "from $65 · curled, straightened or roller"
+          }
+        },
+        "b2": {
+          "type": "price_item",
+          "settings": {
+            "name": "Curls, tongs or straightening",
+            "price": "from $45 · dry hair"
+          }
+        },
+        "b3": {
+          "type": "price_item",
+          "settings": {
+            "name": "Upstyling",
+            "price": "from $100 · 45–75 min"
+          }
+        },
+        "b4": {
+          "type": "price_item",
+          "settings": {
+            "name": "Half upstyle or pin up",
+            "price": "$30 add on"
+          }
+        },
+        "b5": {
+          "type": "price_item",
+          "settings": {
+            "name": "Extensions add on",
+            "price": "from $10"
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
       "settings": {
         "variant": "paper",
         "fallback_asset": "silk-gallery-6.jpg",
@@ -83,6 +201,10 @@
         "image_position": "right",
         "heading": "<p>Blow waves and <em>styling</em></p>",
         "subheading": "For the mornings that matter.",
+        "intro": "",
+        "secondary_heading": "",
+        "secondary_body": "",
+        "footnote": "",
         "link_label": "Book a blow wave",
         "link_url": "#book"
       }
@@ -90,20 +212,60 @@
     "colour": {
       "type": "silk-price-list",
       "blocks": {
-        "co1": { "type": "price_item", "settings": { "name": "Regrowth, 4 to 6 weeks", "price": "from $100 · 30 min" } },
-        "co2": { "type": "price_item", "settings": { "name": "Global colour", "price": "from $120 · 30–60 min" } },
-        "co3": { "type": "price_item", "settings": { "name": "Toning and gloss", "price": "from $55 · 15 min" } },
-        "co4": { "type": "price_item", "settings": { "name": "Root tap", "price": "$25" } },
-        "co5": { "type": "price_item", "settings": { "name": "Extensions tone add on", "price": "$25" } }
+        "co1": {
+          "type": "price_item",
+          "settings": {
+            "name": "Regrowth, 4 to 6 weeks",
+            "price": "from $100 · 30 min"
+          }
+        },
+        "co2": {
+          "type": "price_item",
+          "settings": {
+            "name": "Global colour",
+            "price": "from $120 · 30–60 min"
+          }
+        },
+        "co3": {
+          "type": "price_item",
+          "settings": {
+            "name": "Toning and gloss",
+            "price": "from $55 · 15 min"
+          }
+        },
+        "co4": {
+          "type": "price_item",
+          "settings": {
+            "name": "Root tap",
+            "price": "$25"
+          }
+        },
+        "co5": {
+          "type": "price_item",
+          "settings": {
+            "name": "Extensions tone add on",
+            "price": "$25"
+          }
+        }
       },
-      "block_order": ["co1", "co2", "co3", "co4", "co5"],
+      "block_order": [
+        "co1",
+        "co2",
+        "co3",
+        "co4",
+        "co5"
+      ],
       "settings": {
         "variant": "wine",
+        "fallback_asset": "",
+        "fallback_alt": "",
+        "image_position": "left",
         "heading": "<p>Colour</p>",
         "subheading": "Colour that grows out beautifully.",
         "intro": "<p>The mark of good colour is not the first week. It is week eight, when the regrowth line is soft instead of a shelf, and you have not started avoiding the mirror.</p>",
         "secondary_heading": "How colour is priced, realistically",
         "secondary_body": "<p>Every colour service is quoted on a standard measure of product. If your hair is thicker, longer, or the regrowth is further out than usual, it takes more colour, and the extra is weighed and added at the counter through our Vish scales.</p><p>It means you pay for the product that went on your head, not a flat fee that quietly overcharges everyone with short hair. You will always be told before we start.</p>",
+        "footnote": "",
         "link_label": "Book a colour consultation",
         "link_url": "#book"
       }
@@ -111,20 +273,75 @@
     "blonde": {
       "type": "silk-price-list",
       "blocks": {
-        "bl1": { "type": "price_item", "settings": { "name": "Quarter head", "price": "from $110 · 45 min" } },
-        "bl2": { "type": "price_item", "settings": { "name": "Half head", "price": "from $160 · 60 min" } },
-        "bl3": { "type": "price_item", "settings": { "name": "Three quarter head", "price": "from $210 · 75 min" } },
-        "bl4": { "type": "price_item", "settings": { "name": "Full head", "price": "from $260 · 90 min" } },
-        "bl5": { "type": "price_item", "settings": { "name": "Tip out add on", "price": "from $50" } },
-        "bl6": { "type": "price_item", "settings": { "name": "Global lightening on scalp", "price": "from $150 · depends on time since last" } },
-        "bl7": { "type": "price_item", "settings": { "name": "Global all over", "price": "from $300 · 90 min" } }
+        "bl1": {
+          "type": "price_item",
+          "settings": {
+            "name": "Quarter head",
+            "price": "from $110 · 45 min"
+          }
+        },
+        "bl2": {
+          "type": "price_item",
+          "settings": {
+            "name": "Half head",
+            "price": "from $160 · 60 min"
+          }
+        },
+        "bl3": {
+          "type": "price_item",
+          "settings": {
+            "name": "Three quarter head",
+            "price": "from $210 · 75 min"
+          }
+        },
+        "bl4": {
+          "type": "price_item",
+          "settings": {
+            "name": "Full head",
+            "price": "from $260 · 90 min"
+          }
+        },
+        "bl5": {
+          "type": "price_item",
+          "settings": {
+            "name": "Tip out add on",
+            "price": "from $50"
+          }
+        },
+        "bl6": {
+          "type": "price_item",
+          "settings": {
+            "name": "Global lightening on scalp",
+            "price": "from $150 · depends on time since last"
+          }
+        },
+        "bl7": {
+          "type": "price_item",
+          "settings": {
+            "name": "Global all over",
+            "price": "from $300 · 90 min"
+          }
+        }
       },
-      "block_order": ["bl1", "bl2", "bl3", "bl4", "bl5", "bl6", "bl7"],
+      "block_order": [
+        "bl1",
+        "bl2",
+        "bl3",
+        "bl4",
+        "bl5",
+        "bl6",
+        "bl7"
+      ],
       "settings": {
         "variant": "paper",
+        "fallback_asset": "",
+        "fallback_alt": "",
+        "image_position": "left",
         "heading": "<p>All things <em>blonde</em></p>",
         "subheading": "Blonde is a technique, not a bottle.",
         "intro": "<p>Foils, balayage, teasylights and babylights. Which one you need depends on where your hair is now and where you want it in a year, not on what you saw on a screen.</p><p>Book a consultation first if you are changing direction. Blonde done in the wrong order is the most expensive mistake in hairdressing.</p>",
+        "secondary_heading": "",
+        "secondary_body": "",
         "footnote": "Extra product may be added through the Vish scales, same as colour.",
         "link_label": "Book a blonde consultation",
         "link_url": "#book"
@@ -133,15 +350,65 @@
     "extensions": {
       "type": "silk-price-list",
       "blocks": {
-        "e1": { "type": "price_item", "settings": { "name": "14 inch, 50g", "price": "from $250" } },
-        "e2": { "type": "price_item", "settings": { "name": "18 inch, 50g", "price": "from $350" } },
-        "e3": { "type": "price_item", "settings": { "name": "22 inch, 50g", "price": "from $450" } },
-        "e4": { "type": "price_item", "settings": { "name": "Installation and maintenance", "price": "$150 per 50g" } },
-        "e5": { "type": "price_item", "settings": { "name": "K-Tip rebond and installation, hybrid sets", "price": "$10 per strand" } },
-        "e6": { "type": "price_item", "settings": { "name": "Mesh integration", "price": "$250 per 3cm²" } },
-        "e7": { "type": "price_item", "settings": { "name": "Removal", "price": "$50 per 15 min" } }
+        "e1": {
+          "type": "price_item",
+          "settings": {
+            "name": "14 inch, 50g",
+            "price": "from $250"
+          }
+        },
+        "e2": {
+          "type": "price_item",
+          "settings": {
+            "name": "18 inch, 50g",
+            "price": "from $350"
+          }
+        },
+        "e3": {
+          "type": "price_item",
+          "settings": {
+            "name": "22 inch, 50g",
+            "price": "from $450"
+          }
+        },
+        "e4": {
+          "type": "price_item",
+          "settings": {
+            "name": "Installation and maintenance",
+            "price": "$150 per 50g"
+          }
+        },
+        "e5": {
+          "type": "price_item",
+          "settings": {
+            "name": "K-Tip rebond and installation, hybrid sets",
+            "price": "$10 per strand"
+          }
+        },
+        "e6": {
+          "type": "price_item",
+          "settings": {
+            "name": "Mesh integration",
+            "price": "$250 per 3cm²"
+          }
+        },
+        "e7": {
+          "type": "price_item",
+          "settings": {
+            "name": "Removal",
+            "price": "$50 per 15 min"
+          }
+        }
       },
-      "block_order": ["e1", "e2", "e3", "e4", "e5", "e6", "e7"],
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
       "settings": {
         "variant": "wine",
         "fallback_asset": "silk-gallery-3.jpg",
@@ -152,6 +419,8 @@
         "heading": "<p>Extensions</p>",
         "subheading": "We will tell you exactly where your hair came from.",
         "intro": "<p>Ask us where the hair is from and you get a straight answer. Most salons cannot give you one, and that is worth knowing before you have it sewn into your head.</p><p>We fit butterfly weft, sew in weft and wide tape weft, and we will tell you which suits your hair rather than which we prefer to install.</p>",
+        "secondary_heading": "",
+        "secondary_body": "",
         "footnote": "Extensions start with a consultation. Length, weight and method all change the price, and we would rather quote you properly than guess.",
         "link_label": "Book an extensions consultation",
         "link_url": "#book"
@@ -160,13 +429,44 @@
     "membership": {
       "type": "silk-membership",
       "blocks": {
-        "p1": { "type": "perk", "settings": { "perk": "A blow wave every Friday" } },
-        "p2": { "type": "perk", "settings": { "perk": "20% off the Hair Lab Heads experience" } },
-        "p3": { "type": "perk", "settings": { "perk": "15% off any colour service" } },
-        "p4": { "type": "perk", "settings": { "perk": "10% off retail" } },
-        "p5": { "type": "perk", "settings": { "perk": "One luxury treatment vial" } }
+        "p1": {
+          "type": "perk",
+          "settings": {
+            "perk": "A blow wave every Friday"
+          }
+        },
+        "p2": {
+          "type": "perk",
+          "settings": {
+            "perk": "20% off the Hair Lab Heads experience"
+          }
+        },
+        "p3": {
+          "type": "perk",
+          "settings": {
+            "perk": "15% off any colour service"
+          }
+        },
+        "p4": {
+          "type": "perk",
+          "settings": {
+            "perk": "10% off retail"
+          }
+        },
+        "p5": {
+          "type": "perk",
+          "settings": {
+            "perk": "One luxury treatment vial"
+          }
+        }
       },
-      "block_order": ["p1", "p2", "p3", "p4", "p5"],
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ],
       "settings": {
         "eyebrow": "Every Friday, 6.30am to 1.30pm",
         "heading": "<p>Miami <em>Friday.</em></p>",
@@ -180,17 +480,81 @@
     "faq": {
       "type": "silk-faq",
       "blocks": {
-        "q1": { "type": "faq", "settings": { "question": "How much does a haircut cost at Silk Hair Lab?", "answer": "<p>A wash, cut and blow wave starts at $130 and a basic trim without a wash starts at $85. The price depends on your hair length, and you are given the exact figure before we begin.</p>" } },
-        "q2": { "type": "faq", "settings": { "question": "Why did my colour cost more than the price listed?", "answer": "<p>Colour prices are based on a standard measure of product. If your hair is thick, long, or the regrowth is further out, it takes more colour, and the extra is weighed on our Vish scales and added at the counter. We tell you before we start, not after.</p>" } },
-        "q3": { "type": "faq", "settings": { "question": "How long does a full head of foils take?", "answer": "<p>About 90 minutes, plus a 45 minute gap afterwards for processing and finishing. Allow the better part of a morning.</p>" } },
-        "q4": { "type": "faq", "settings": { "question": "Do I need a consultation before colour or extensions?", "answer": "<p>Yes, if you are changing direction, going blonde, or having extensions fitted for the first time. There is no way to price or plan those properly without seeing your hair.</p>" } },
-        "q5": { "type": "faq", "settings": { "question": "Where does Silk Hair Lab get its extensions?", "answer": "<p>We can tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this, and you are entitled to know.</p>" } },
-        "q6": { "type": "faq", "settings": { "question": "What is trichology?", "answer": "<p>Trichology is the science of hair and scalp health. It covers why hair grows, why it stops, and what can be done about shedding, thinning and scalp conditions.</p>" } },
-        "q7": { "type": "faq", "settings": { "question": "Do I need the Diagnostic Ritual before a scalp treatment?", "answer": "<p>Yes. There is no way to know which treatment you need without looking at your scalp under magnification first, and we would rather not sell you something that will not work.</p>" } },
-        "q8": { "type": "faq", "settings": { "question": "Can hair loss be reversed?", "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. The Diagnostic Ritual is how we find out which one you have.</p>" } },
-        "q9": { "type": "faq", "settings": { "question": "Where is Silk Hair Lab?", "answer": "<p>Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.</p>" } }
+        "q1": {
+          "type": "faq",
+          "settings": {
+            "question": "How much does a haircut cost at Silk Hair Lab?",
+            "answer": "<p>A wash, cut and blow wave starts at $130 and a basic trim without a wash starts at $85. The price depends on your hair length, and you are given the exact figure before we begin.</p>"
+          }
+        },
+        "q2": {
+          "type": "faq",
+          "settings": {
+            "question": "Why did my colour cost more than the price listed?",
+            "answer": "<p>Colour prices are based on a standard measure of product. If your hair is thick, long, or the regrowth is further out, it takes more colour, and the extra is weighed on our Vish scales and added at the counter. We tell you before we start, not after.</p>"
+          }
+        },
+        "q3": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does a full head of foils take?",
+            "answer": "<p>About 90 minutes, plus a 45 minute gap afterwards for processing and finishing. Allow the better part of a morning.</p>"
+          }
+        },
+        "q4": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need a consultation before colour or extensions?",
+            "answer": "<p>Yes, if you are changing direction, going blonde, or having extensions fitted for the first time. There is no way to price or plan those properly without seeing your hair.</p>"
+          }
+        },
+        "q5": {
+          "type": "faq",
+          "settings": {
+            "question": "Where does Silk Hair Lab get its extensions?",
+            "answer": "<p>We can tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this, and you are entitled to know.</p>"
+          }
+        },
+        "q6": {
+          "type": "faq",
+          "settings": {
+            "question": "What is trichology?",
+            "answer": "<p>Trichology is the science of hair and scalp health. It covers why hair grows, why it stops, and what can be done about shedding, thinning and scalp conditions.</p>"
+          }
+        },
+        "q7": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need the Diagnostic Ritual before a scalp treatment?",
+            "answer": "<p>Yes. There is no way to know which treatment you need without looking at your scalp under magnification first, and we would rather not sell you something that will not work.</p>"
+          }
+        },
+        "q8": {
+          "type": "faq",
+          "settings": {
+            "question": "Can hair loss be reversed?",
+            "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. The Diagnostic Ritual is how we find out which one you have.</p>"
+          }
+        },
+        "q9": {
+          "type": "faq",
+          "settings": {
+            "question": "Where is Silk Hair Lab?",
+            "answer": "<p>Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.</p>"
+          }
+        }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
       "settings": {
         "anchor_id": "questions",
         "heading": "<p>The questions <em>we get most.</em></p>",
@@ -201,16 +565,20 @@
       "type": "silk-book-cta",
       "settings": {
         "anchor_id": "book",
-        "color_scheme": "paper",
         "heading": "<p>Come and <em>see us.</em></p>",
         "body": "Whether you have been meaning to sort your hair for years, or you just need a standing Friday appointment, start with a consultation.",
         "button_label": "Book an appointment",
         "button_link": "#book",
         "footnote": "",
-        "button_bg": "#4F191D",
+        "color_scheme": "paper",
+        "heading_tag": "h2",
+        "heading_font": "theme_heading",
+        "heading_size_desktop": 4.6,
+        "heading_size_mobile": 2.6,
+        "button_bg": "#4f191d",
         "button_bg_hover": "#3d1216",
-        "button_text_color": "#F0EAE4",
-        "button_text_color_hover": "#F0EAE4"
+        "button_text_color": "#f0eae4",
+        "button_text_color_hover": "#f0eae4"
       }
     }
   },
