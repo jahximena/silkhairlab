@@ -41,7 +41,8 @@
         "lead": "Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.",
         "body": "<p>We colour, cut, style and extend hair, and we diagnose and treat hair loss and scalp conditions in the same building.</p><p>Most people arrive for one and end up using both, because the two are not separate problems. Your colour sits on your scalp. Your scalp decides what your hair can do.</p><p>Prices below start from. What you actually pay depends on your hair length and how much product it takes, and you get that number before anything begins.</p>",
         "link_label": "Book an appointment",
-        "link_url": "#book"
+        "link_url": "#book",
+        "link_margin_top": 28
       }
     },
     "scalp_health": {
