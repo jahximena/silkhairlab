@@ -426,6 +426,8 @@
         "fallback_height": 1230,
         "image_position": "left",
         "section_height": 720,
+        "content_padding_top": 50,
+        "content_padding_bottom": 50,
         "heading": "<p>Extensions</p>",
         "subheading": "We will tell you exactly where your hair came from.",
         "intro": "<p>Ask us where the hair is from and you get a straight answer. Most salons cannot give you one, and that is worth knowing before you have it sewn into your head.</p><p>We fit butterfly weft, sew in weft and wide tape weft, and we will tell you which suits your hair rather than which we prefer to install.</p>",
