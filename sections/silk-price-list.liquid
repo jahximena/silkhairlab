@@ -4,7 +4,10 @@
     assign has_image = true
   endif
 -%}
-<section class="silk-plist-sec silk-plist-{{ section.settings.variant }}{% if has_image %} silk-plist-has-image{% endif %}{% if has_image and section.settings.image_position == 'right' %} silk-plist-imgright{% endif %}">
+<section
+  class="silk-plist-sec silk-plist-{{ section.settings.variant }}{% if has_image %} silk-plist-has-image{% endif %}{% if has_image and section.settings.image_position == 'right' %} silk-plist-imgright{% endif %}"
+  style="--silk-plist-height: {{ section.settings.section_height | default: 640 }}px;"
+>
   {%- if has_image -%}
     <div class="silk-plist-im">
       {%- if section.settings.image != blank -%}
@@ -65,7 +68,7 @@
 .silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
 
 .silk-plist-sec{display:grid;grid-template-columns:1fr;}
-.silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr 1fr;}
+.silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr 1fr;min-height:var(--silk-plist-height, 640px);}
 .silk-plist-sec.silk-plist-imgright .silk-plist-im{order:2;}
 .silk-plist-sec.silk-plist-imgright .silk-plist-body{order:1;}
 .silk-plist-im{overflow:hidden;background:#ccc2b6;}
@@ -126,7 +129,7 @@
 
 @media(max-width:900px){
   .silk-wrap{padding-left:24px;padding-right:24px;}
-  .silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr;}
+  .silk-plist-sec.silk-plist-has-image{grid-template-columns:1fr;min-height:auto;}
   .silk-plist-im img{min-height:52vh;}
   .silk-plist-sec.silk-plist-imgright .silk-plist-im{order:1;}
   .silk-plist-sec.silk-plist-imgright .silk-plist-body{order:2;}
@@ -184,6 +187,17 @@
         { "value": "right", "label": "Right" }
       ],
       "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "section_height",
+      "label": "Section height (desktop only)",
+      "info": "Only applies when an image is set. The image crops to fill this height, independent of how much text is in the other column.",
+      "min": 300,
+      "max": 900,
+      "step": 20,
+      "unit": "px",
+      "default": 640
     },
     {
       "type": "richtext",
