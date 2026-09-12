@@ -24,7 +24,10 @@
     </div>
   {%- endif -%}
   <div class="silk-plist-body">
-    <div class="silk-wrap silk-plist-in">
+    <div
+      class="silk-wrap silk-plist-in"
+      style="--silk-plist-pad-top: {{ section.settings.content_padding_top | default: 56 }}px; --silk-plist-pad-bottom: {{ section.settings.content_padding_bottom | default: 56 }}px;"
+    >
       <div class="silk-plist-grid{% if has_image %} silk-plist-grid-narrow{% endif %}">
         <div class="silk-plist-head">
           <h2>{{ section.settings.heading }}</h2>
@@ -74,7 +77,7 @@
 .silk-plist-im{overflow:hidden;background:#ccc2b6;}
 .silk-plist-im img{width:100%;height:100%;object-fit:cover;display:block;min-height:320px;}
 .silk-plist-body{display:flex;align-items:center;}
-.silk-plist-in{padding:clamp(56px,7vw,110px) 0;width:100%;}
+.silk-plist-body .silk-plist-in{padding-top:var(--silk-plist-pad-top, 56px);padding-bottom:var(--silk-plist-pad-bottom, 56px);width:100%;}
 
 .silk-plist-grid{display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,5vw,80px);}
 .silk-plist-grid-narrow{grid-template-columns:1fr;gap:32px;}
@@ -199,6 +202,28 @@
       "step": 20,
       "unit": "px",
       "default": 640
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "label": "Content padding (top)",
+      "info": "Space above the heading/text block, inside the section.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "label": "Content padding (bottom)",
+      "info": "Space below the price list/link, inside the section.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 56
     },
     {
       "type": "richtext",
