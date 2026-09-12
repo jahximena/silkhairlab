@@ -97,7 +97,8 @@
         "border_width": 0,
         "enable_transparent_header_home": true,
         "enable_transparent_header_product": false,
-        "enable_transparent_header_collection": false
+        "enable_transparent_header_collection": false,
+        "enable_transparent_header_page": true
       }
     }
   },
