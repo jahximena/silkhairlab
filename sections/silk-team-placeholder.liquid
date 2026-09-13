@@ -1,4 +1,7 @@
-<section class="silk-tplaceholder">
+<section
+  class="silk-tplaceholder"
+  style="--silk-tplaceholder-pad-top: {{ section.settings.content_padding_top | default: 80 }}px; --silk-tplaceholder-pad-bottom: {{ section.settings.content_padding_bottom | default: 80 }}px;"
+>
   {%- for block in section.blocks -%}
     {%- assign is_even = false -%}
     {%- assign remainder = forloop.index | modulo: 2 -%}
@@ -29,7 +32,7 @@
 
 {% stylesheet %}
 .silk-tplaceholder{background:#4F191D;color:#F0EAE4;}
-.silk-tplaceholder-row{display:grid;grid-template-columns:repeat(12,1fr);gap:48px;padding:80px 0;align-items:start;}
+.silk-tplaceholder .silk-tplaceholder-row{display:grid;grid-template-columns:repeat(12,1fr);gap:48px;padding-top:var(--silk-tplaceholder-pad-top, 80px);padding-bottom:var(--silk-tplaceholder-pad-bottom, 80px);align-items:start;}
 .silk-tplaceholder-row.silk-tplaceholder-divider{border-top:1px solid rgba(240,234,228,.2);}
 .silk-tplaceholder-head{grid-column:1 / span 5;}
 .silk-tplaceholder-copy-col{grid-column:7 / span 6;}
@@ -58,7 +61,7 @@
 
 @media(max-width:900px){
   .silk-wrap{padding-left:24px;padding-right:24px;}
-  .silk-tplaceholder-row{grid-template-columns:1fr;gap:24px;padding:56px 0;}
+  .silk-tplaceholder .silk-tplaceholder-row{grid-template-columns:1fr;gap:24px;padding:56px 0;}
   .silk-tplaceholder-head,
   .silk-tplaceholder-copy-col,
   .silk-tplaceholder-row.silk-tplaceholder-reverse .silk-tplaceholder-head,
@@ -73,7 +76,30 @@
 {
   "name": "Silk team placeholder",
   "tag": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "label": "Row padding (top)",
+      "info": "Space above each person's name, applied to every row.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "label": "Row padding (bottom)",
+      "info": "Space below each person's link, applied to every row.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 80
+    }
+  ],
   "blocks": [
     {
       "type": "person",
