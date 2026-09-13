@@ -13,7 +13,7 @@
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
-        "image": "",
+        "image": "shopify://shop_images/book-hero-1Apvivz9.jpg",
         "eyebrow": "Book now",
         "heading": "<p>Book <em>Now</em></p>",
         "subheading": "Start with a conversation.",
@@ -78,7 +78,7 @@
       "type": "silk-team-profile",
       "settings": {
         "anchor_id": "",
-        "image": "",
+        "image": "shopify://shop_images/first-visit-consult-I3hcZWQQ.jpg",
         "image_alt": "A stylist consulting with a client before her appointment",
         "image_position": "left",
         "color_scheme": "wine",
