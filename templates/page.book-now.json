@@ -53,7 +53,11 @@
           }
         }
       },
-      "block_order": ["item_1", "item_2", "item_3"],
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3"
+      ],
       "settings": {
         "heading": "<p>Not sure what to <em>book?</em></p>",
         "footnote": "You can book online through Phorest using the button on this page, or call [phone]. For hair loss, scalp treatments, blonde or extensions, book a consultation first.",
@@ -83,15 +87,65 @@
     "find_us": {
       "type": "silk-find-us",
       "blocks": {
-        "mon": { "type": "hours_row", "settings": { "day": "Monday", "hours": "[hours]" } },
-        "tue": { "type": "hours_row", "settings": { "day": "Tuesday", "hours": "[hours]" } },
-        "wed": { "type": "hours_row", "settings": { "day": "Wednesday", "hours": "[hours]" } },
-        "thu": { "type": "hours_row", "settings": { "day": "Thursday", "hours": "[hours]" } },
-        "fri": { "type": "hours_row", "settings": { "day": "Friday", "hours": "6.30am to 1.30pm, Blow Wave Club" } },
-        "sat": { "type": "hours_row", "settings": { "day": "Saturday", "hours": "[hours]" } },
-        "sun": { "type": "hours_row", "settings": { "day": "Sunday", "hours": "[hours]" } }
+        "mon": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Monday",
+            "hours": "[hours]"
+          }
+        },
+        "tue": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Tuesday",
+            "hours": "[hours]"
+          }
+        },
+        "wed": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Wednesday",
+            "hours": "[hours]"
+          }
+        },
+        "thu": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Thursday",
+            "hours": "[hours]"
+          }
+        },
+        "fri": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Friday",
+            "hours": "6.30am to 1.30pm, Blow Wave Club"
+          }
+        },
+        "sat": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Saturday",
+            "hours": "[hours]"
+          }
+        },
+        "sun": {
+          "type": "hours_row",
+          "settings": {
+            "day": "Sunday",
+            "hours": "[hours]"
+          }
+        }
       },
-      "block_order": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "block_order": [
+        "mon",
+        "tue",
+        "wed",
+        "thu",
+        "fri",
+        "sat",
+        "sun"
+      ],
       "settings": {
         "anchor_id": "find-us",
         "eyebrow": "Find us",
@@ -128,5 +182,11 @@
       }
     }
   },
-  "order": ["hero", "help", "first_visit", "find_us", "book"]
+  "order": [
+    "hero",
+    "help",
+    "first_visit",
+    "find_us",
+    "book"
+  ]
 }
