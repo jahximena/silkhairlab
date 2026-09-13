@@ -50,8 +50,13 @@
           </ul>
         {%- endif -%}
         {%- if section.settings.parking_body != blank -%}
-          <h3 class="silk-findus-parking-heading">{{ section.settings.parking_heading }}</h3>
-          <p class="silk-findus-parking-body">{{ section.settings.parking_body }}</p>
+          <div
+            class="silk-findus-parking"
+            style="margin-top: {{ section.settings.parking_margin_top | default: 64 }}px; margin-bottom: {{ section.settings.parking_margin_bottom | default: 0 }}px;"
+          >
+            <h3 class="silk-findus-parking-heading">{{ section.settings.parking_heading }}</h3>
+            <p class="silk-findus-parking-body">{{ section.settings.parking_body }}</p>
+          </div>
         {%- endif -%}
       </div>
     </div>
@@ -85,7 +90,7 @@
 .silk-findus-hours li{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(28,28,24,.15);padding:12px 0;font-family:var(--font-body--family);font-size:14.5px;color:#6f6a63;}
 .silk-findus-day{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.7;}
 
-.silk-findus-parking-heading{margin-top:64px;}
+.silk-findus-parking-heading{margin:0;}
 .silk-findus-parking-body{margin-top:16px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#6f6a63;max-width:none;}
 
 .silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
@@ -175,6 +180,28 @@
       "type": "text",
       "id": "parking_body",
       "label": "Parking body"
+    },
+    {
+      "type": "range",
+      "id": "parking_margin_top",
+      "label": "Parking margin (top)",
+      "info": "Space above the Parking heading.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "parking_margin_bottom",
+      "label": "Parking margin (bottom)",
+      "info": "Space below the Parking text.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 0
     },
     {
       "type": "header",
