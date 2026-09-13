@@ -32,6 +32,9 @@
     class="silk-wrap silk-hero-in"
     style="--silk-hero-pad-top: {{ section.settings.padding_top | default: 120 }}px; --silk-hero-pad-bottom: {{ section.settings.padding_bottom | default: 90 }}px;"
   >
+    {%- if section.settings.eyebrow != blank -%}
+      <p class="silk-hero-eyebrow">{{ section.settings.eyebrow }}</p>
+    {%- endif -%}
     <h1
       style="
         margin-top: {{ section.settings.heading_margin_top | default: 0 }}px;
@@ -89,6 +92,7 @@
   font-size:clamp(3.2rem,8.4vw,7.2rem);max-width:15ch;margin:0;text-wrap:balance;
 }
 .silk-hero h1 em{font-style:italic;}
+.silk-hero-eyebrow{color:rgba(240,234,228,.7);font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0;}
 .silk-hero-sub{color:rgba(240,234,228,.9);font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.05rem,1.7vw,1.4rem);margin-top:28px;max-width:34ch;}
 .silk-hero-body{color:rgba(240,234,228,.8);font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;margin-top:20px;max-width:60ch;}
 .silk-hero-body p{margin:0 0 12px;max-width:none;}
@@ -128,6 +132,12 @@
       "type": "image_picker",
       "id": "image",
       "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow (optional)",
+      "info": "A small label above the heading. Leave blank to hide."
     },
     {
       "type": "richtext",

@@ -1,0 +1,132 @@
+{
+  "sections": {
+    "hero": {
+      "type": "silk-hero",
+      "settings": {
+        "anchor_id": "top",
+        "image": "",
+        "eyebrow": "Book now",
+        "heading": "<p>Book <em>Now</em></p>",
+        "subheading": "Start with a conversation.",
+        "body": "<p>Whether you have been worried about your hair for years or you just want a really good blow wave, start with a conversation.</p><p>Bookings are made through Phorest. You will see live availability and can pick your own time.</p>",
+        "button_label": "Book online",
+        "button_link": "#find-us",
+        "tlink_label": "",
+        "tlink_link": "",
+        "height_vh": 80,
+        "padding_top": 130,
+        "padding_bottom": 90,
+        "heading_margin_top": 0,
+        "heading_margin_bottom": 0,
+        "button_margin_top": 0,
+        "button_margin_right": 0,
+        "button_margin_bottom": 0,
+        "button_margin_left": 0,
+        "tlink_margin_top": 0,
+        "tlink_margin_right": 0,
+        "tlink_margin_bottom": 0,
+        "tlink_margin_left": 0
+      }
+    },
+    "help": {
+      "type": "silk-help-grid",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "title": "My hair is falling out or thinning",
+            "body": "<p>Book the Diagnostic Ritual. 45 minutes, $150, and the $150 comes back off your treatment plan.</p>"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "title": "I want colour, blonde or extensions",
+            "body": "<p>Book a consultation first if it is your first time with us or you are changing direction. It is free and it saves money later.</p>"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "title": "I just want my hair done",
+            "body": "<p>Book the service you want. If you are not sure on length, pick the shorter one and we will sort it when you arrive.</p>"
+          }
+        }
+      },
+      "block_order": ["item_1", "item_2", "item_3"],
+      "settings": {
+        "heading": "<p>Not sure what to <em>book?</em></p>",
+        "footnote": "You can book online through Phorest using the button on this page, or call [phone]. For hair loss, scalp treatments, blonde or extensions, book a consultation first.",
+        "content_padding_top": 84,
+        "content_padding_bottom": 84
+      }
+    },
+    "first_visit": {
+      "type": "silk-team-profile",
+      "settings": {
+        "anchor_id": "",
+        "image": "",
+        "image_alt": "A stylist consulting with a client before her appointment",
+        "image_position": "left",
+        "color_scheme": "wine",
+        "content_padding_top": 56,
+        "content_padding_bottom": 56,
+        "eyebrow": "Your first visit",
+        "heading": "<p>What happens on your <em>first visit</em></p>",
+        "role": "You will be asked more questions than you are used to.",
+        "body": "<p>That is deliberate.</p><p>We want to know what your hair has been through, what you have already tried, what you do to it at home, and what you actually want. Then we look at it properly, tell you what we think, and give you a real price before anything starts.</p><p>If what you want is not going to work, we will tell you that too, and then tell you what will.</p>",
+        "list_heading": "",
+        "link_label": "",
+        "link_url": ""
+      }
+    },
+    "find_us": {
+      "type": "silk-find-us",
+      "blocks": {
+        "mon": { "type": "hours_row", "settings": { "day": "Monday", "hours": "[hours]" } },
+        "tue": { "type": "hours_row", "settings": { "day": "Tuesday", "hours": "[hours]" } },
+        "wed": { "type": "hours_row", "settings": { "day": "Wednesday", "hours": "[hours]" } },
+        "thu": { "type": "hours_row", "settings": { "day": "Thursday", "hours": "[hours]" } },
+        "fri": { "type": "hours_row", "settings": { "day": "Friday", "hours": "6.30am to 1.30pm, Blow Wave Club" } },
+        "sat": { "type": "hours_row", "settings": { "day": "Saturday", "hours": "[hours]" } },
+        "sun": { "type": "hours_row", "settings": { "day": "Sunday", "hours": "[hours]" } }
+      },
+      "block_order": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+      "settings": {
+        "anchor_id": "find-us",
+        "eyebrow": "Find us",
+        "heading": "<p>Come and <em>see us.</em></p>",
+        "address": "[full address]",
+        "phone": "[phone]",
+        "email": "[email]",
+        "instagram": "[handle]",
+        "hours_heading": "Opening hours",
+        "parking_heading": "Parking",
+        "parking_body": "[One sentence on where to park.]",
+        "content_padding_top": 84,
+        "content_padding_bottom": 84
+      }
+    },
+    "book": {
+      "type": "silk-book-cta",
+      "settings": {
+        "anchor_id": "book",
+        "heading": "<p>Ready when <em>you are.</em></p>",
+        "body": "See live availability and pick your own time, or call us and we will talk it through first.",
+        "button_label": "Book online",
+        "button_link": "#find-us",
+        "footnote": "",
+        "color_scheme": "wine",
+        "heading_tag": "h2",
+        "heading_font": "theme_heading",
+        "heading_size_desktop": 3.7,
+        "heading_size_mobile": 2.2,
+        "button_bg": "#f0eae4",
+        "button_bg_hover": "#ffffff",
+        "button_text_color": "#4f191d",
+        "button_text_color_hover": "#4f191d"
+      }
+    }
+  },
+  "order": ["hero", "help", "first_visit", "find_us", "book"]
+}
