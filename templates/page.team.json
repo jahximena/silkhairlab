@@ -1,0 +1,120 @@
+{
+  "sections": {
+    "hero": {
+      "type": "silk-hero",
+      "settings": {
+        "anchor_id": "top",
+        "image": "",
+        "heading": "<p>The <em>Team</em></p>",
+        "subheading": "Four chairs. Nobody gets rushed.",
+        "body": "<p>Silk is small on purpose. Four chairs means you get a full appointment with one person, not fifteen minutes each from three.</p>",
+        "button_label": "",
+        "button_link": "",
+        "tlink_label": "",
+        "tlink_link": "",
+        "height_vh": 70,
+        "padding_top": 130,
+        "padding_bottom": 60,
+        "heading_margin_top": 0,
+        "heading_margin_bottom": 0,
+        "button_margin_top": 0,
+        "button_margin_right": 0,
+        "button_margin_bottom": 0,
+        "button_margin_left": 0,
+        "tlink_margin_top": 0,
+        "tlink_margin_right": 0,
+        "tlink_margin_bottom": 0,
+        "tlink_margin_left": 0
+      }
+    },
+    "founder": {
+      "type": "silk-team-profile",
+      "blocks": {
+        "best_for_1": {
+          "type": "list_item",
+          "settings": { "text": "Hair loss and scalp diagnosis" }
+        },
+        "best_for_2": {
+          "type": "list_item",
+          "settings": { "text": "Blonde correction" }
+        },
+        "best_for_3": {
+          "type": "list_item",
+          "settings": { "text": "Extensions" }
+        }
+      },
+      "block_order": ["best_for_1", "best_for_2", "best_for_3"],
+      "settings": {
+        "anchor_id": "kelly",
+        "image": "",
+        "image_alt": "Kelly McColgan, founder of Silk Hair Lab",
+        "image_position": "left",
+        "eyebrow": "Founder",
+        "heading": "<p>Kelly <em>McColgan</em></p>",
+        "role": "Founder, hairdresser and trichologist",
+        "body": "<p>Kelly McColgan has 25 years of hairdressing experience and is qualified in trichology, the science of hair and scalp health.</p><p>She started at twelve years old in Ireland, sweeping floors in a salon because she wanted to be in one. She trained in Belfast, then cut her way around the world before landing on the Gold Coast.</p><p>Somewhere in those 25 years she got tired of a particular conversation. A woman would sit down, worried about her hair, and be sold something longer, fuller and faker. Nobody would tell her why it was happening. Kelly went and studied the science so she could answer the question instead of decorating it.</p><p>That is why Silk is both things at once. It is a clinic, with a microscope and real answers about what your hair is doing. It is also a Friday morning with rollers in and an iced coffee in your hand.</p><p>Both are the same thing, really. Because when your hair feels right, it helps you feel right.</p>",
+        "list_heading": "Kelly is best for",
+        "link_label": "Book with Kelly",
+        "link_url": "#book"
+      }
+    },
+    "placeholders": {
+      "type": "silk-team-placeholder",
+      "blocks": {
+        "person_1": {
+          "type": "person",
+          "settings": {
+            "heading": "Person One",
+            "subheading": "Short bios. Long appointments.",
+            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "link_label": "Get in touch",
+            "link_url": "/pages/contact"
+          }
+        },
+        "person_2": {
+          "type": "person",
+          "settings": {
+            "heading": "Person Two",
+            "subheading": "Short bios. Long appointments.",
+            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "link_label": "Get in touch",
+            "link_url": "/pages/contact"
+          }
+        },
+        "person_3": {
+          "type": "person",
+          "settings": {
+            "heading": "Person Three",
+            "subheading": "Short bios. Long appointments.",
+            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "link_label": "Get in touch",
+            "link_url": "/pages/contact"
+          }
+        }
+      },
+      "block_order": ["person_1", "person_2", "person_3"],
+      "settings": {}
+    },
+    "book": {
+      "type": "silk-book-cta",
+      "settings": {
+        "anchor_id": "work-here",
+        "heading": "<p>Want to <em>work here?</em></p>",
+        "body": "We are always interested in hearing from hairdressers who would rather do four clients properly than eight badly. Send us a message.",
+        "button_label": "Get in touch",
+        "button_link": "/pages/contact",
+        "footnote": "",
+        "color_scheme": "paper",
+        "heading_tag": "h2",
+        "heading_font": "theme_heading",
+        "heading_size_desktop": 3.7,
+        "heading_size_mobile": 2.2,
+        "button_bg": "#4f191d",
+        "button_bg_hover": "#3d1216",
+        "button_text_color": "#f0eae4",
+        "button_text_color_hover": "#f0eae4"
+      }
+    }
+  },
+  "order": ["hero", "founder", "placeholders", "book"]
+}

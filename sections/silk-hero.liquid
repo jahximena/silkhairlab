@@ -41,6 +41,9 @@
     {%- if subheading != blank -%}
       <p class="silk-hero-sub">{{ subheading }}</p>
     {%- endif -%}
+    {%- if section.settings.body != blank -%}
+      <div class="silk-hero-body">{{ section.settings.body }}</div>
+    {%- endif -%}
     <div class="silk-hero-actions">
       {%- if button_label != blank -%}
         <a
@@ -87,6 +90,9 @@
 }
 .silk-hero h1 em{font-style:italic;}
 .silk-hero-sub{color:rgba(240,234,228,.9);font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.05rem,1.7vw,1.4rem);margin-top:28px;max-width:34ch;}
+.silk-hero-body{color:rgba(240,234,228,.8);font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;margin-top:20px;max-width:34ch;}
+.silk-hero-body p{margin:0 0 12px;max-width:none;}
+.silk-hero-body p:last-child{margin-bottom:0;}
 .silk-hero-actions{display:flex;gap:24px;align-items:center;margin-top:40px;flex-wrap:wrap;}
 .silk-hero-actions .silk-tlink{color:var(--silk-paper);}
 
@@ -134,6 +140,12 @@
       "id": "subheading",
       "label": "Subheading",
       "default": "A hair studio and scalp clinic on the Gold Coast."
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Body copy (optional)",
+      "info": "A short paragraph below the subheading. Leave blank to hide."
     },
     {
       "type": "text",
