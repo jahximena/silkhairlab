@@ -61,8 +61,8 @@
       "settings": {
         "heading": "<p>Not sure what to <em>book?</em></p>",
         "footnote": "You can book online through Phorest using the button on this page, or call [phone]. For hair loss, scalp treatments, blonde or extensions, book a consultation first.",
-        "content_padding_top": 84,
-        "content_padding_bottom": 84
+        "content_padding_top": 80,
+        "content_padding_bottom": 80
       }
     },
     "first_visit": {
@@ -157,8 +157,8 @@
         "hours_heading": "Opening hours",
         "parking_heading": "Parking",
         "parking_body": "[One sentence on where to park.]",
-        "content_padding_top": 84,
-        "content_padding_bottom": 84
+        "content_padding_top": 80,
+        "content_padding_bottom": 80
       }
     },
     "book": {

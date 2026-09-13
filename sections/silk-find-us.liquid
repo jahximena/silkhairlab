@@ -1,7 +1,7 @@
 <section
   id="{{ section.settings.anchor_id | default: 'find-us' }}"
   class="silk-findus-sec"
-  style="--silk-findus-pad-top: {{ section.settings.content_padding_top | default: 84 }}px; --silk-findus-pad-bottom: {{ section.settings.content_padding_bottom | default: 84 }}px;"
+  style="--silk-findus-pad-top: {{ section.settings.content_padding_top | default: 80 }}px; --silk-findus-pad-bottom: {{ section.settings.content_padding_bottom | default: 80 }}px;"
 >
   <div class="silk-wrap silk-findus-in silk-reveal">
     {%- if section.settings.eyebrow != blank -%}
@@ -59,7 +59,7 @@
 </section>
 
 {% stylesheet %}
-.silk-findus-sec .silk-findus-in{padding-top:var(--silk-findus-pad-top, 84px);padding-bottom:var(--silk-findus-pad-bottom, 84px);}
+.silk-findus-sec .silk-findus-in{padding-top:var(--silk-findus-pad-top, 80px);padding-bottom:var(--silk-findus-pad-bottom, 80px);}
 .silk-findus-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin:0;}
 
 .silk-findus-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:56px;margin-top:40px;}
@@ -188,7 +188,7 @@
       "max": 160,
       "step": 8,
       "unit": "px",
-      "default": 84
+      "default": 80
     },
     {
       "type": "range",
@@ -198,7 +198,7 @@
       "max": 160,
       "step": 8,
       "unit": "px",
-      "default": 84
+      "default": 80
     }
   ],
   "blocks": [
