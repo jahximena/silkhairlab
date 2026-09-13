@@ -97,6 +97,14 @@
     align-items: center;
     text-decoration: none;
 
+    /* Nudge the logo right so its left edge lines up with the page content's
+       left edge (custom sections use a 1280px/44px-padding content box,
+       while the header's own grid centers on the theme's page-width
+       setting) - value derived from those two systems' constants. */
+    @media screen and (min-width: 750px) {
+      margin-inline-start: 84px;
+    }
+
     &[data-hidden-on-home-page] {
       display: none;
 
