@@ -36,9 +36,9 @@
   style="
     {% render 'size-style', settings: block_settings %}
     {% render 'spacing-style', settings: block_settings %}
-    --font-family: var(--font-body--family);
-    --font-style: var(--font-body--style);
-    --font-weight: 600;
+    --font-family: var(--font-heading--family);
+    --font-style: italic;
+    --font-weight: 400;
   "
   {{ block.shopify_attributes }}
 >
@@ -88,7 +88,7 @@
   .header-logo {
     display: flex;
     height: 100%;
-    font-size: var(--font-size--md);
+    font-size: 1.6rem;
     font-family: var(--font-family);
     font-weight: var(--font-weight);
     font-style: var(--font-style);
