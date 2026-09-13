@@ -93,8 +93,15 @@
 
     {% capture children %}
       {% for link in block_settings.menu.links %}
+        {% liquid
+          assign is_cta_link = false
+          assign lower_title = link.title | downcase
+          if lower_title contains 'book'
+            assign is_cta_link = true
+          endif
+        %}
         <li
-          class="menu-list__list-item"
+          class="menu-list__list-item{% if is_cta_link %} menu-list__list-item--cta{% endif %}"
           on:blur="/deactivate"
           on:pointerenter="/activate"
           on:pointerleave="/deactivate"
@@ -105,7 +112,7 @@
           <a
             href="{{ link.url }}"
             data-skip-node-update="true"
-            class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
+            class="menu-list__link{% if is_cta_link %} menu-list__link--cta{% endif %}{% if link.active %} menu-list__link--active{% endif %}"
             {% if link.current %}
               aria-current="page"
             {% endif %}
@@ -404,6 +411,31 @@
   }
   [slot='overflow'] .menu-list__link-title {
     padding-inline: 0;
+  }
+
+  /* Style a menu item titled "Book" (e.g. "Book an appointment") as a
+     solid CTA button rather than a plain text link, matching the
+     button style used elsewhere on the site (silk-btn-paper). */
+  .menu-list__list-item--cta {
+    margin-inline-start: var(--gap-sm);
+  }
+  .menu-list__link--cta .menu-list__link-title {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 28px;
+    background: #F0EAE4;
+    color: #4F191D;
+    font-family: var(--font-body--family);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background 0.35s, color 0.35s;
+  }
+  .menu-list__link--cta:hover .menu-list__link-title,
+  .menu-list__link--cta:focus .menu-list__link-title {
+    background: #ffffff;
+    color: #4F191D;
   }
 
   .menu-list__list-item:not([slot='overflow']) {
