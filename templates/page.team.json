@@ -1,10 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
-        "image": "",
+        "image": "shopify://shop_images/team-hero-B2twrGJC.jpg",
+        "eyebrow": "",
         "heading": "<p>The <em>Team</em></p>",
         "subheading": "Four chairs. Nobody gets rushed.",
         "body": "<p>Silk is small on purpose. Four chairs means you get a full appointment with one person, not fifteen minutes each from three.</p>",
@@ -32,23 +42,36 @@
       "blocks": {
         "best_for_1": {
           "type": "list_item",
-          "settings": { "text": "Hair loss and scalp diagnosis" }
+          "settings": {
+            "text": "Hair loss and scalp diagnosis"
+          }
         },
         "best_for_2": {
           "type": "list_item",
-          "settings": { "text": "Blonde correction" }
+          "settings": {
+            "text": "Blonde correction"
+          }
         },
         "best_for_3": {
           "type": "list_item",
-          "settings": { "text": "Extensions" }
+          "settings": {
+            "text": "Extensions"
+          }
         }
       },
-      "block_order": ["best_for_1", "best_for_2", "best_for_3"],
+      "block_order": [
+        "best_for_1",
+        "best_for_2",
+        "best_for_3"
+      ],
       "settings": {
         "anchor_id": "kelly",
-        "image": "",
+        "image": "shopify://shop_images/kelly-D-FdJBGn.jpg",
         "image_alt": "Kelly McColgan, founder of Silk Hair Lab",
         "image_position": "left",
+        "color_scheme": "paper",
+        "content_padding_top": 56,
+        "content_padding_bottom": 56,
         "eyebrow": "Founder",
         "heading": "<p>Kelly <em>McColgan</em></p>",
         "role": "Founder, hairdresser and trichologist",
@@ -92,8 +115,15 @@
           }
         }
       },
-      "block_order": ["person_1", "person_2", "person_3"],
-      "settings": {}
+      "block_order": [
+        "person_1",
+        "person_2",
+        "person_3"
+      ],
+      "settings": {
+        "content_padding_top": 80,
+        "content_padding_bottom": 80
+      }
     },
     "book": {
       "type": "silk-book-cta",
@@ -116,5 +146,10 @@
       }
     }
   },
-  "order": ["hero", "founder", "placeholders", "book"]
+  "order": [
+    "hero",
+    "founder",
+    "placeholders",
+    "book"
+  ]
 }
