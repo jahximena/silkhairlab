@@ -22,7 +22,10 @@
     {%- endif -%}
   </div>
   <div class="silk-tprofile-body silk-reveal">
-    <div class="silk-wrap silk-tprofile-in">
+    <div
+      class="silk-wrap silk-tprofile-in"
+      style="--silk-tprofile-pad-top: {{ section.settings.content_padding_top | default: 56 }}px; --silk-tprofile-pad-bottom: {{ section.settings.content_padding_bottom | default: 56 }}px;"
+    >
       {%- if section.settings.eyebrow != blank -%}
         <p class="silk-tprofile-eyebrow">{{ section.settings.eyebrow }}</p>
       {%- endif -%}
@@ -59,7 +62,7 @@
 .silk-tprofile-im{overflow:hidden;background:#ccc2b6;}
 .silk-tprofile-im img{width:100%;height:100%;object-fit:cover;display:block;}
 .silk-tprofile-body{background:#F0EAE4;color:#1C1C18;display:flex;align-items:center;}
-.silk-tprofile-in{padding-top:56px;padding-bottom:56px;width:100%;}
+.silk-tprofile-body .silk-tprofile-in{padding-top:var(--silk-tprofile-pad-top, 56px);padding-bottom:var(--silk-tprofile-pad-bottom, 56px);width:100%;}
 
 .silk-tprofile-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin:0;}
 .silk-tprofile-body h2{
@@ -129,6 +132,32 @@
         { "value": "right", "label": "Right" }
       ],
       "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Content padding"
+    },
+    {
+      "type": "range",
+      "id": "content_padding_top",
+      "label": "Content padding (top)",
+      "info": "Space above the eyebrow/name, inside the section.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "content_padding_bottom",
+      "label": "Content padding (bottom)",
+      "info": "Space below the list/link, inside the section.",
+      "min": 0,
+      "max": 160,
+      "step": 8,
+      "unit": "px",
+      "default": 56
     },
     {
       "type": "text",
