@@ -436,6 +436,7 @@
       },
       "block_order": ["p1", "p2", "p3", "p4", "p5"],
       "settings": {
+        "color_scheme": "wine",
         "eyebrow": "Every Friday, 6.30am to 1.30pm",
         "heading": "<p>Miami <em>Friday.</em></p>",
         "subheading": "Good hair. Good mood. Good Friday.",
@@ -516,7 +517,7 @@
       "settings": {
         "anchor_id": "questions",
         "heading": "<p>The questions <em>we get most.</em></p>",
-        "color_scheme": "dark"
+        "color_scheme": "light"
       }
     },
     "book": {

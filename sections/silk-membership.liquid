@@ -1,4 +1,4 @@
-<section class="silk-sec silk-member-sec">
+<section class="silk-sec silk-member-sec silk-member-{{ section.settings.color_scheme | default: 'paper' }}">
   <div class="silk-wrap silk-member-in">
     {%- if section.settings.eyebrow != blank -%}
       <p class="silk-member-eyebrow">{{ section.settings.eyebrow }}</p>
@@ -30,22 +30,41 @@
 .silk-sec{padding:clamp(84px,11vw,150px) 0;}
 .silk-wrap{max-width:1280px;margin:0 auto;padding:0 44px;}
 .silk-member-in{max-width:760px;margin:0 auto;text-align:center;}
-.silk-member-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8A8E68;margin:0;}
+.silk-member-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin:0;}
 .silk-member-in h2{
-  font-family:var(--font-heading--family);font-weight:320;line-height:1.05;letter-spacing:-.02em;color:#4F191D;
+  font-family:var(--font-heading--family);font-weight:320;line-height:1.05;letter-spacing:-.02em;
   font-size:clamp(2.2rem,4vw,3.7rem);margin:20px 0 0;text-wrap:balance;
 }
 .silk-member-in h2 em{font-style:italic;}
-.silk-member-sub{font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.1rem,1.6vw,1.28rem);color:#3a352f;margin-top:16px;}
-.silk-member-body{margin-top:32px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#3a352f;display:grid;gap:16px;}
+.silk-member-sub{font-family:var(--font-body--family);font-weight:300;font-size:clamp(1.1rem,1.6vw,1.28rem);margin-top:16px;}
+.silk-member-body{margin-top:32px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;display:grid;gap:16px;}
 .silk-member-body p{margin:0;max-width:none;}
 .silk-member-perks{
   list-style:none;margin:40px auto 0;padding:32px 0;max-width:420px;
-  border-top:1px solid rgba(28,28,24,.16);border-bottom:1px solid rgba(28,28,24,.16);
-  display:grid;gap:12px;font-family:var(--font-body--family);font-size:14px;color:#3a352f;
+  display:grid;gap:12px;font-family:var(--font-body--family);font-size:14px;
 }
-.silk-member-lk{margin-top:40px;color:#4F191D;}
-.silk-member-footnote{margin-top:24px;font-family:var(--font-body--family);font-size:12px;letter-spacing:.06em;color:#6f6a63;}
+.silk-member-lk{margin-top:40px;}
+.silk-member-footnote{margin-top:24px;font-family:var(--font-body--family);font-size:12px;letter-spacing:.06em;}
+
+/* paper variant (light bg) */
+.silk-member-paper{background:#F0EAE4;color:#1C1C18;}
+.silk-member-paper .silk-member-eyebrow{color:#8A8E68;}
+.silk-member-paper .silk-member-in h2{color:#4F191D;}
+.silk-member-paper .silk-member-sub{color:#3a352f;}
+.silk-member-paper .silk-member-body{color:#3a352f;}
+.silk-member-paper .silk-member-perks{color:#3a352f;border-top:1px solid rgba(28,28,24,.16);border-bottom:1px solid rgba(28,28,24,.16);}
+.silk-member-paper .silk-member-lk{color:#4F191D;}
+.silk-member-paper .silk-member-footnote{color:#6f6a63;}
+
+/* wine/maroon variant (dark bg) */
+.silk-member-wine{background:#4F191D;color:#F0EAE4;}
+.silk-member-wine .silk-member-eyebrow{color:#c7a49c;}
+.silk-member-wine .silk-member-in h2{color:#F0EAE4;}
+.silk-member-wine .silk-member-sub{color:#e7cfc9;}
+.silk-member-wine .silk-member-body{color:#ecdfd9;}
+.silk-member-wine .silk-member-perks{color:#ecdfd9;border-top:1px solid rgba(240,234,228,.25);border-bottom:1px solid rgba(240,234,228,.25);}
+.silk-member-wine .silk-member-lk{color:#F0EAE4;}
+.silk-member-wine .silk-member-footnote{color:#c7a49c;}
 
 .silk-tlink{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:inline-flex;gap:.5em;align-items:center;position:relative;padding-bottom:4px;}
 .silk-tlink::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(1);transform-origin:right;transition:transform .4s;}
@@ -63,6 +82,16 @@
   "name": "Silk membership",
   "tag": "section",
   "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "label": "Background",
+      "options": [
+        { "value": "paper", "label": "Paper (light)" },
+        { "value": "wine", "label": "Wine / maroon (dark)" }
+      ],
+      "default": "paper"
+    },
     {
       "type": "text",
       "id": "eyebrow",
