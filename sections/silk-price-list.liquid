@@ -45,15 +45,32 @@
           {%- endif -%}
         </div>
         <div class="silk-plist-list-col">
-          {%- if section.blocks.size > 0 -%}
+          {%- assign price_blocks = section.blocks | where: 'type', 'price_item' -%}
+          {%- assign accordion_blocks = section.blocks | where: 'type', 'accordion_item' -%}
+          {%- if price_blocks.size > 0 -%}
             <ul class="silk-plist-ul">
-              {%- for block in section.blocks -%}
+              {%- for block in price_blocks -%}
                 <li {{ block.shopify_attributes }}>
                   <span class="silk-plist-name">{{ block.settings.name }}</span>
                   <span class="silk-plist-price">{{ block.settings.price }}</span>
                 </li>
               {%- endfor -%}
             </ul>
+          {%- endif -%}
+          {%- if accordion_blocks.size > 0 -%}
+            <div class="silk-plist-acc">
+              {%- for block in accordion_blocks -%}
+                <details {{ block.shopify_attributes }}>
+                  <summary>{{ block.settings.title }}<span class="silk-plist-pl"></span></summary>
+                  <div class="silk-plist-acc-inner">
+                    {%- if block.settings.meta != blank -%}
+                      <div class="silk-plist-acc-meta">{{ block.settings.meta }}</div>
+                    {%- endif -%}
+                    <div class="silk-plist-acc-body">{{ block.settings.body }}</div>
+                  </div>
+                </details>
+              {%- endfor -%}
+            </div>
           {%- endif -%}
           {%- if section.settings.footnote != blank -%}
             <p class="silk-plist-footnote">{{ section.settings.footnote }}</p>
@@ -98,6 +115,23 @@
 .silk-plist-ul li{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding:16px 0;border-bottom:1px solid;}
 .silk-plist-name{font-family:var(--font-heading--family);font-weight:340;font-size:1.25rem;}
 .silk-plist-price{font-family:var(--font-body--family);font-size:12px;letter-spacing:.1em;}
+
+.silk-plist-acc{border-top:1px solid;}
+.silk-plist-acc details{border-bottom:1px solid;}
+.silk-plist-acc summary{
+  list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;gap:20px;align-items:center;
+  font-family:var(--font-heading--family);font-weight:420;font-size:clamp(1.05rem,1.8vw,1.32rem);transition:color .25s;
+}
+.silk-plist-acc summary::-webkit-details-marker{display:none;}
+.silk-plist-pl{position:relative;width:16px;height:16px;flex:0 0 16px;}
+.silk-plist-pl::before,.silk-plist-pl::after{content:"";position:absolute;background:currentColor;}
+.silk-plist-pl::before{top:7.5px;left:0;width:16px;height:1.5px;}
+.silk-plist-pl::after{left:7.5px;top:0;height:16px;width:1.5px;transition:.3s;}
+.silk-plist-acc details[open] .silk-plist-pl::after{transform:rotate(90deg);opacity:0;}
+.silk-plist-acc-inner{padding:0 32px 22px 0;}
+.silk-plist-acc-meta{font-family:var(--font-body--family);font-weight:400;font-size:11px;letter-spacing:.2em;text-transform:uppercase;}
+.silk-plist-acc-body{margin-top:10px;font-family:var(--font-body--family);font-weight:300;font-size:15px;line-height:1.66;}
+.silk-plist-acc-body p{margin:0;max-width:none;}
 .silk-plist-footnote{margin-top:20px;font-family:var(--font-body--family);font-size:12px;letter-spacing:.05em;}
 .silk-plist-lk{margin-top:28px;}
 
@@ -117,6 +151,13 @@
 .silk-plist-paper .silk-plist-price{color:#6f6a63;}
 .silk-plist-paper .silk-plist-footnote{color:#6f6a63;}
 .silk-plist-paper .silk-plist-lk{color:#4F191D;}
+.silk-plist-paper .silk-plist-acc{border-color:rgba(28,28,24,.16);}
+.silk-plist-paper .silk-plist-acc details{border-color:rgba(28,28,24,.16);}
+.silk-plist-paper .silk-plist-acc summary{color:#1C1C18;}
+.silk-plist-paper .silk-plist-acc summary:hover{color:#4F191D;}
+.silk-plist-paper .silk-plist-pl{color:#8A8E68;}
+.silk-plist-paper .silk-plist-acc-meta{color:#4F191D;}
+.silk-plist-paper .silk-plist-acc-body{color:#3a352f;}
 
 /* wine variant (dark bg) */
 .silk-plist-wine{background:#4F191D;color:#F0EAE4;}
@@ -129,6 +170,13 @@
 .silk-plist-wine .silk-plist-price{color:rgba(240,234,228,.7);}
 .silk-plist-wine .silk-plist-footnote{color:rgba(240,234,228,.7);}
 .silk-plist-wine .silk-plist-lk{color:#F0EAE4;}
+.silk-plist-wine .silk-plist-acc{border-color:rgba(240,234,228,.22);}
+.silk-plist-wine .silk-plist-acc details{border-color:rgba(240,234,228,.22);}
+.silk-plist-wine .silk-plist-acc summary{color:#F0EAE4;}
+.silk-plist-wine .silk-plist-acc summary:hover{color:#f3ded8;}
+.silk-plist-wine .silk-plist-pl{color:#c7a49c;}
+.silk-plist-wine .silk-plist-acc-meta{color:#c7a49c;}
+.silk-plist-wine .silk-plist-acc-body{color:#ecdfd9;}
 
 @media(max-width:900px){
   .silk-wrap{padding-left:24px;padding-right:24px;}
@@ -282,6 +330,27 @@
           "type": "text",
           "id": "price",
           "label": "Price / detail line"
+        }
+      ]
+    },
+    {
+      "type": "accordion_item",
+      "name": "Accordion item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "meta",
+          "label": "Price / duration line"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Description"
         }
       ]
     }

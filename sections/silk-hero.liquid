@@ -19,8 +19,8 @@
       {{ image | image_url: width: 2400 | image_tag: loading: 'eager', fetchpriority: 'high', sizes: '100vw', widths: '750,1100,1500,2000,2400', alt: image_alt }}
     {%- else -%}
       <img
-        src="{{ 'silk-hero.jpg' | asset_url }}"
-        alt="{{ heading | strip_html }}"
+        src="{{ section.settings.fallback_asset | default: 'silk-hero.jpg' | asset_url }}"
+        alt="{{ section.settings.fallback_alt | default: heading | strip_html }}"
         width="1500"
         height="1000"
         loading="eager"
@@ -132,6 +132,17 @@
       "type": "image_picker",
       "id": "image",
       "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "fallback_asset",
+      "label": "Fallback asset (leave as-is)",
+      "info": "Filename of a bundled theme image shown until a background image is picked above."
+    },
+    {
+      "type": "text",
+      "id": "fallback_alt",
+      "label": "Fallback image alt text"
     },
     {
       "type": "text",

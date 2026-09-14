@@ -1,19 +1,12 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero": {
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
-        "image": "shopify://shop_images/services-background.jpg",
+        "image": "",
+        "fallback_asset": "silk-services-hero.jpg",
+        "fallback_alt": "A wet cut being shaped at Silk Hair Lab",
         "eyebrow": "",
         "heading": "<p>Services and <em>Prices</em></p>",
         "subheading": "Everything your hair needs, in one room.",
@@ -49,13 +42,48 @@
     },
     "scalp_health": {
       "type": "silk-price-list",
+      "blocks": {
+        "t1": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "The Diagnostic Ritual",
+            "meta": "From $150 · 45 minutes",
+            "body": "<p>A microscopic evaluation of your scalp and follicles. We look at the biological drivers behind shedding, sensitivity or imbalance, and you go home with a written plan for what to do about it. The $150 comes back off your treatment plan when you book one.</p>"
+          }
+        },
+        "t2": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "The Cellular Renewal Scalp Facial",
+            "meta": "From $350 · 1 hour",
+            "body": "<p>A deep scalp detox for buildup, stubborn sebum and micro inflammation, using our hydro dermabrasion machine. Exfoliation, extraction, a targeted nourishment infusion, and a scalp massage that undoes about six months of tension.</p>"
+          }
+        },
+        "t3": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "The Follicle Infusion Therapy",
+            "meta": "From $450 · 1 hour",
+            "body": "<p>A regenerative treatment aimed at circulation and dormant roots. Medical grade actives are delivered into the dermis to build density and support stronger growth from the source.</p>"
+          }
+        },
+        "t4": {
+          "type": "accordion_item",
+          "settings": {
+            "title": "The Comprehensive Hair and Scalp Restoration Program",
+            "meta": "16 weeks · $500 deposit, then $200 a week for 15 weeks",
+            "body": "<p>Our full reset. A complete diagnostic scan, then a corrective treatment built for your scalp, delivered weekly for sixteen weeks, alongside a home care routine you actually follow. This is a serious option, and it is not for everybody. The Diagnostic Ritual tells us whether you need it.</p>"
+          }
+        }
+      },
+      "block_order": ["t1", "t2", "t3", "t4"],
       "settings": {
         "variant": "wine",
-        "image": "shopify://shop_images/Hair_loss_and_scalp_health.jpg",
-        "fallback_asset": "silk-service-lab.jpg",
-        "fallback_alt": "Scalp examined under magnification at the Hair Lab",
-        "fallback_width": 1200,
-        "fallback_height": 1500,
+        "image": "",
+        "fallback_asset": "silk-scalp-exam.jpg",
+        "fallback_alt": "A scalp examined under magnification",
+        "fallback_width": 955,
+        "fallback_height": 701,
         "image_position": "left",
         "section_height": 540,
         "content_padding_top": 56,
@@ -66,53 +94,6 @@
         "secondary_heading": "",
         "secondary_body": "",
         "footnote": "",
-        "link_label": "Book an appointment",
-        "link_url": ""
-      }
-    },
-    "treatments": {
-      "type": "silk-treatment-grid",
-      "blocks": {
-        "t1": {
-          "type": "treatment",
-          "settings": {
-            "title": "The Diagnostic Ritual",
-            "eyebrow": "From $150. 45 minutes.",
-            "body": "<p>A microscopic evaluation of your scalp and follicles. We look at the biological drivers behind shedding, sensitivity or imbalance, and you go home with a written plan for what to do about it. The $150 comes back off your treatment plan when you book one.</p>"
-          }
-        },
-        "t2": {
-          "type": "treatment",
-          "settings": {
-            "title": "The Cellular Renewal Scalp Facial",
-            "eyebrow": "From $350. 1 hour.",
-            "body": "<p>A deep scalp detox for buildup, stubborn sebum and micro inflammation, using our hydro dermabrasion machine. Exfoliation, extraction, a targeted nourishment infusion, and a scalp massage that undoes about six months of tension.</p>"
-          }
-        },
-        "t3": {
-          "type": "treatment",
-          "settings": {
-            "title": "The Follicle Infusion Therapy",
-            "eyebrow": "From $450. 1 hour.",
-            "body": "<p>A regenerative treatment aimed at circulation and dormant roots. Medical grade actives are delivered into the dermis to build density and support stronger growth from the source.</p>"
-          }
-        },
-        "t4": {
-          "type": "treatment",
-          "settings": {
-            "title": "The Comprehensive Hair and Scalp Restoration Program",
-            "eyebrow": "16 weeks. $500 deposit, then $200 a week for 15 weeks.",
-            "body": "<p>Our full reset. A complete diagnostic scan, then a corrective treatment built for your scalp, delivered weekly for sixteen weeks, alongside a home care routine you actually follow. This is a serious option, and it is not for everybody. The Diagnostic Ritual tells us whether you need it.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "t1",
-        "t2",
-        "t3",
-        "t4"
-      ],
-      "settings": {
         "link_label": "Book the Diagnostic Ritual",
         "link_url": "#book"
       }
@@ -135,15 +116,15 @@
           }
         }
       },
-      "block_order": [
-        "c1",
-        "c2"
-      ],
+      "block_order": ["c1", "c2"],
       "settings": {
-        "variant": "wine",
-        "fallback_asset": "",
-        "fallback_alt": "",
-        "image_position": "left",
+        "variant": "paper",
+        "image": "",
+        "fallback_asset": "silk-cutting.jpg",
+        "fallback_alt": "A precision cut in progress",
+        "fallback_width": 820,
+        "fallback_height": 1093,
+        "image_position": "right",
         "section_height": 500,
         "content_padding_top": 56,
         "content_padding_bottom": 56,
@@ -196,21 +177,15 @@
           }
         }
       },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4",
-        "b5"
-      ],
+      "block_order": ["b1", "b2", "b3", "b4", "b5"],
       "settings": {
         "variant": "paper",
-        "image": "shopify://shop_images/Blow_waves_and_styling.jpg",
-        "fallback_asset": "silk-gallery-6.jpg",
-        "fallback_alt": "Soft waves after a blow wave treatment",
-        "fallback_width": 736,
-        "fallback_height": 1104,
-        "image_position": "right",
+        "image": "",
+        "fallback_asset": "silk-blowwave-styling.jpg",
+        "fallback_alt": "A blow wave being finished with a straightener",
+        "fallback_width": 955,
+        "fallback_height": 903,
+        "image_position": "left",
         "section_height": 640,
         "content_padding_top": 56,
         "content_padding_bottom": 56,
@@ -263,18 +238,15 @@
           }
         }
       },
-      "block_order": [
-        "co1",
-        "co2",
-        "co3",
-        "co4",
-        "co5"
-      ],
+      "block_order": ["co1", "co2", "co3", "co4", "co5"],
       "settings": {
-        "variant": "wine",
-        "fallback_asset": "",
-        "fallback_alt": "",
-        "image_position": "left",
+        "variant": "paper",
+        "image": "",
+        "fallback_asset": "silk-colour-foils.jpg",
+        "fallback_alt": "Foils being placed at Silk Hair Lab",
+        "fallback_width": 1200,
+        "fallback_height": 1800,
+        "image_position": "right",
         "section_height": 640,
         "content_padding_top": 56,
         "content_padding_bottom": 56,
@@ -341,19 +313,14 @@
           }
         }
       },
-      "block_order": [
-        "bl1",
-        "bl2",
-        "bl3",
-        "bl4",
-        "bl5",
-        "bl6",
-        "bl7"
-      ],
+      "block_order": ["bl1", "bl2", "bl3", "bl4", "bl5", "bl6", "bl7"],
       "settings": {
-        "variant": "paper",
-        "fallback_asset": "",
-        "fallback_alt": "",
+        "variant": "wine",
+        "image": "",
+        "fallback_asset": "silk-blonde-waves.jpg",
+        "fallback_alt": "Long blonde hair finished in soft waves",
+        "fallback_width": 1200,
+        "fallback_height": 1799,
         "image_position": "left",
         "section_height": 760,
         "content_padding_top": 56,
@@ -421,22 +388,15 @@
           }
         }
       },
-      "block_order": [
-        "e1",
-        "e2",
-        "e3",
-        "e4",
-        "e5",
-        "e6",
-        "e7"
-      ],
+      "block_order": ["e1", "e2", "e3", "e4", "e5", "e6", "e7"],
       "settings": {
-        "variant": "wine",
-        "fallback_asset": "silk-gallery-3.jpg",
-        "fallback_alt": "Hand-placed extensions held up in the studio",
-        "fallback_width": 820,
-        "fallback_height": 1230,
-        "image_position": "left",
+        "variant": "paper",
+        "image": "",
+        "fallback_asset": "silk-extensions-weft.jpg",
+        "fallback_alt": "A weft of extension hair held up",
+        "fallback_width": 955,
+        "fallback_height": 1305,
+        "image_position": "right",
         "section_height": 720,
         "content_padding_top": 56,
         "content_padding_bottom": 56,
@@ -455,42 +415,26 @@
       "blocks": {
         "p1": {
           "type": "perk",
-          "settings": {
-            "perk": "A blow wave every Friday"
-          }
+          "settings": { "perk": "A blow wave every Friday" }
         },
         "p2": {
           "type": "perk",
-          "settings": {
-            "perk": "20% off the Hair Lab Heads experience"
-          }
+          "settings": { "perk": "20% off the Hair Lab Heads experience" }
         },
         "p3": {
           "type": "perk",
-          "settings": {
-            "perk": "15% off any colour service"
-          }
+          "settings": { "perk": "15% off any colour service" }
         },
         "p4": {
           "type": "perk",
-          "settings": {
-            "perk": "10% off retail"
-          }
+          "settings": { "perk": "10% off retail" }
         },
         "p5": {
           "type": "perk",
-          "settings": {
-            "perk": "One luxury treatment vial"
-          }
+          "settings": { "perk": "One luxury treatment vial" }
         }
       },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3",
-        "p4",
-        "p5"
-      ],
+      "block_order": ["p1", "p2", "p3", "p4", "p5"],
       "settings": {
         "eyebrow": "Every Friday, 6.30am to 1.30pm",
         "heading": "<p>Miami <em>Friday.</em></p>",
@@ -515,70 +459,60 @@
           "type": "faq",
           "settings": {
             "question": "Why did my colour cost more than the price listed?",
-            "answer": "<p>Colour prices are based on a standard measure of product. If your hair is thick, long, or the regrowth is further out, it takes more colour, and the extra is weighed on our Vish scales and added at the counter. We tell you before we start, not after.</p>"
+            "answer": "<p>Because your hair took more product. Colour is quoted on a standard measure, and anything above that is weighed on our Vish scales and added at the counter. It is the fairest way we have found to do it, and you are always told before we start.</p>"
           }
         },
         "q3": {
           "type": "faq",
           "settings": {
             "question": "How long does a full head of foils take?",
-            "answer": "<p>About 90 minutes, plus a 45 minute gap afterwards for processing and finishing. Allow the better part of a morning.</p>"
+            "answer": "<p>Around 90 minutes for the foils themselves, from $260. Add time if you are toning, cutting or blow waving afterwards, and we will book that time in for you rather than rushing the end of it.</p>"
           }
         },
         "q4": {
           "type": "faq",
           "settings": {
             "question": "Do I need a consultation before colour or extensions?",
-            "answer": "<p>Yes, if you are changing direction, going blonde, or having extensions fitted for the first time. There is no way to price or plan those properly without seeing your hair.</p>"
+            "answer": "<p>If you are changing direction with colour, or getting extensions for the first time, yes. It is fifteen minutes that decides whether the next year of your hair goes well or expensively.</p>"
           }
         },
         "q5": {
           "type": "faq",
           "settings": {
             "question": "Where does Silk Hair Lab get its extensions?",
-            "answer": "<p>We can tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this, and you are entitled to know.</p>"
+            "answer": "<p>We will tell you the exact source of any hair we put in your head. Ask us. Most salons cannot answer this.</p>"
           }
         },
         "q6": {
           "type": "faq",
           "settings": {
             "question": "What is trichology?",
-            "answer": "<p>Trichology is the science of hair and scalp health. It covers why hair grows, why it stops, and what can be done about shedding, thinning and scalp conditions.</p>"
+            "answer": "<p>The study of the hair and scalp, and of what makes them behave the way they do. In practice it means your scalp is examined under magnification and your history is taken properly, before anyone sells you a product.</p>"
           }
         },
         "q7": {
           "type": "faq",
           "settings": {
             "question": "Do I need the Diagnostic Ritual before a scalp treatment?",
-            "answer": "<p>Yes. There is no way to know which treatment you need without looking at your scalp under magnification first, and we would rather not sell you something that will not work.</p>"
+            "answer": "<p>Yes, and there is a reason. There is no way to know what your scalp needs without looking at it first. The $150 comes back off your treatment plan when you book one.</p>"
           }
         },
         "q8": {
           "type": "faq",
           "settings": {
             "question": "Can hair loss be reversed?",
-            "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. The Diagnostic Ritual is how we find out which one you have.</p>"
+            "answer": "<p>Sometimes, and it depends entirely on the cause. Hair loss from stress, illness, diet, hormones or damage often responds well to treatment. Scarring hair loss will not regrow, but it can be slowed. This is exactly what a consultation is for.</p>"
           }
         },
         "q9": {
           "type": "faq",
           "settings": {
             "question": "Where is Silk Hair Lab?",
-            "answer": "<p>Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.</p>"
+            "answer": "<p>On the Gold Coast. Full address and opening hours to confirm.</p>"
           }
         }
       },
-      "block_order": [
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6",
-        "q7",
-        "q8",
-        "q9"
-      ],
+      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"],
       "settings": {
         "anchor_id": "questions",
         "heading": "<p>The questions <em>we get most.</em></p>",
@@ -610,7 +544,6 @@
     "hero",
     "intro",
     "scalp_health",
-    "treatments",
     "cutting",
     "blowwave",
     "colour",
