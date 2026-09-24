@@ -14,10 +14,10 @@
       {{ image | image_url: width: 1400 | image_tag: loading: 'lazy', sizes: '(min-width: 900px) 50vw, 100vw', widths: '600,900,1200,1400', alt: image_alt }}
     {%- else -%}
       <img
-        src="{{ 'silk-founder.jpg' | asset_url }}"
+        src="{{ section.settings.fallback_asset | default: 'silk-founder.jpg' | asset_url }}"
         alt="{{ image_alt }}"
-        width="1200"
-        height="1504"
+        width="{{ section.settings.fallback_width | default: 1200 }}"
+        height="{{ section.settings.fallback_height | default: 1504 }}"
         loading="lazy"
       >
     {%- endif -%}
@@ -139,6 +139,22 @@
       "type": "text",
       "id": "image_alt",
       "label": "Photo alt text"
+    },
+    {
+      "type": "text",
+      "id": "fallback_asset",
+      "label": "Fallback asset (leave as-is)",
+      "info": "Filename of a bundled theme image shown until a photo is picked above."
+    },
+    {
+      "type": "number",
+      "id": "fallback_width",
+      "label": "Fallback asset width (leave as-is)"
+    },
+    {
+      "type": "number",
+      "id": "fallback_height",
+      "label": "Fallback asset height (leave as-is)"
     },
     {
       "type": "select",

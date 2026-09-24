@@ -66,8 +66,11 @@
       ],
       "settings": {
         "anchor_id": "kelly",
-        "image": "shopify://shop_images/kelly-D-FdJBGn.jpg",
+        "image": "",
         "image_alt": "Kelly McColgan, founder of Silk Hair Lab",
+        "fallback_asset": "silk-team-kelly.jpg",
+        "fallback_width": 1333,
+        "fallback_height": 2000,
         "image_position": "left",
         "color_scheme": "paper",
         "content_padding_top": 56,
