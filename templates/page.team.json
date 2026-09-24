@@ -87,9 +87,14 @@
         "person_1": {
           "type": "person",
           "settings": {
-            "heading": "Person One",
-            "subheading": "Short bios. Long appointments.",
-            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "image": "",
+            "image_alt": "Liv, hairdresser at Silk Hair Lab",
+            "fallback_asset": "silk-team-liv.jpg",
+            "fallback_width": 1333,
+            "fallback_height": 2000,
+            "heading": "Liv",
+            "subheading": "",
+            "body": "<p>Hiya I'm Liv, and I started hairdressing at 15. Hairdressing has always been a big interest of mine, and I've loved growing my skills, meeting new people and finding my own style along the way.</p><p>What I love most about hairdressing is the people. I love the one-on-one experience with my clients, getting to know them, having a chat and making them feel their absolute best. There's nothing better than seeing someone walk out of the salon feeling like a whole new woman — with I'm Every Woman by Chaka Khan playing in the background! I also absolutely love the atmosphere in our salon. Working alongside my team feels like working with a second family, and the laughs, chats and good vibes make coming to work feel like I've never actually worked a day in my life!</p><p>I'm really proud to have qualified as a hairdresser and to have built my skills and experience from such a young age. I'm excited to keep learning, creating and, most importantly, making people feel amazing one head of hair at a time.</p>",
             "link_label": "Get in touch",
             "link_url": "/pages/contact"
           }
@@ -97,9 +102,14 @@
         "person_2": {
           "type": "person",
           "settings": {
-            "heading": "Person Two",
-            "subheading": "Short bios. Long appointments.",
-            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "image": "",
+            "image_alt": "Lilly Wills, hairdresser at Silk Hair Lab",
+            "fallback_asset": "silk-team-lily.jpg",
+            "fallback_width": 1333,
+            "fallback_height": 2000,
+            "heading": "Lilly",
+            "subheading": "",
+            "body": "<p>Hi I'm Lilly Wills, I started my apprenticeship in my last year of school, graduating last year I've loved growing my skills and confidence in the industry ever since. What I love most about the hairdressing industry is being able to meet different people and make them feel confident and happy with their hair. I love doing hair because it allows me to be creative while also making someone feel their best. One of my achievements so far has been building my confidence and skills through my apprenticeship and being able to take on more services and responsibilities as I've progressed.</p><p>I'm excited to keep learning and growing.</p><p>I'm now entering the world of trichology and as a qualified scalp practitioner will be extending my services and knowledge further to support our clients in the Hair Lab.</p>",
             "link_label": "Get in touch",
             "link_url": "/pages/contact"
           }
@@ -107,9 +117,14 @@
         "person_3": {
           "type": "person",
           "settings": {
-            "heading": "Person Three",
-            "subheading": "Short bios. Long appointments.",
-            "body": "<p>Every stylist at Silk has their own chair, their own regulars and their own thing they are known for. This profile is on its way.</p><p>Until then, tell us what you need when you book and we will put you with the right person.</p>",
+            "image": "",
+            "image_alt": "Makenna Bates, hairdresser at Silk Hair Lab",
+            "fallback_asset": "silk-team-makenna.jpg",
+            "fallback_width": 1333,
+            "fallback_height": 2000,
+            "heading": "Makenna",
+            "subheading": "",
+            "body": "<p>Hi, I'm Makenna Bates. I've been hairdressing since I was 15 and have always loved the creative side of the industry. As an emerging stylist, I'm passionate about continuing to learn, build my experience and become the best stylist I can be.</p><p>What I love about hairdressing is that there's always something new to learn and so many different ways to be creative. I enjoy being able to bring someone's vision to life and create a look that makes them feel confident.</p><p>I also love the relationships you build with clients and the atmosphere of working in a salon. Being able to make someone feel comfortable, have a good chat and leave feeling happy with their hair is one of my favourite parts of the job. I'm excited to keep developing my skills and growing within the industry.</p>",
             "link_label": "Get in touch",
             "link_url": "/pages/contact"
           }
