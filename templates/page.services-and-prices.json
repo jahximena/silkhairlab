@@ -36,7 +36,7 @@
         "lead": "Silk Hair Lab is a hair studio and scalp clinic on the Gold Coast.",
         "body": "<p>We colour, cut, style and extend hair, and we diagnose and treat hair loss and scalp conditions in the same building.</p><p>Most people arrive for one and end up using both, because the two are not separate problems. Your colour sits on your scalp. Your scalp decides what your hair can do.</p><p>Prices below start from. What you actually pay depends on your hair length and how much product it takes, and you get that number before anything begins.</p>",
         "link_label": "Book an appointment",
-        "link_url": "#book",
+        "link_url": "https://www.phorest.com/salon/silkhairlab",
         "link_margin_top": 28
       }
     },
@@ -95,7 +95,7 @@
         "secondary_body": "",
         "footnote": "",
         "link_label": "Book the Diagnostic Ritual",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "cutting": {
@@ -135,7 +135,7 @@
         "secondary_body": "",
         "footnote": "",
         "link_label": "Book a cut",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "blowwave": {
@@ -196,7 +196,7 @@
         "secondary_body": "",
         "footnote": "",
         "link_label": "Book a blow wave",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "colour": {
@@ -257,7 +257,7 @@
         "secondary_body": "<p>Every colour service is quoted on a standard measure of product. If your hair is thicker, longer, or the regrowth is further out than usual, it takes more colour, and the extra is weighed and added at the counter through our Vish scales.</p><p>It means you pay for the product that went on your head, not a flat fee that quietly overcharges everyone with short hair. You will always be told before we start.</p>",
         "footnote": "",
         "link_label": "Book a colour consultation",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "blonde": {
@@ -332,7 +332,7 @@
         "secondary_body": "",
         "footnote": "Extra product may be added through the Vish scales, same as colour.",
         "link_label": "Book a blonde consultation",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "extensions": {
@@ -407,7 +407,7 @@
         "secondary_body": "",
         "footnote": "Extensions start with a consultation. Length, weight and method all change the price, and we would rather quote you properly than guess.",
         "link_label": "Book an extensions consultation",
-        "link_url": "#book"
+        "link_url": "https://www.phorest.com/salon/silkhairlab"
       }
     },
     "membership": {
@@ -442,7 +442,7 @@
         "subheading": "Good hair. Good mood. Good Friday.",
         "body": "<p>Come straight from the gym. Leave feeling unstoppable.</p><p>$199 a month gets you a blow wave every single Friday, booked into the same slot so it is one less thing to think about. It is a standing appointment with yourself.</p>",
         "link_label": "Join the Blow Wave Club",
-        "link_url": "#book",
+        "link_url": "https://www.phorest.com/salon/silkhairlab",
         "footnote": "Limited memberships. Four chairs, one morning a week."
       }
     },
@@ -527,7 +527,7 @@
         "heading": "<p>Come and <em>see us.</em></p>",
         "body": "Whether you have been meaning to sort your hair for years, or you just need a standing Friday appointment, start with a consultation.",
         "button_label": "Book an appointment",
-        "button_link": "#book",
+        "button_link": "https://www.phorest.com/salon/silkhairlab",
         "footnote": "",
         "color_scheme": "paper",
         "heading_tag": "h2",

@@ -18,7 +18,7 @@
       </ul>
     {%- endif -%}
     {%- if section.settings.link_label != blank -%}
-      <a class="silk-tlink silk-member-lk" href="{{ section.settings.link_url | default: '#book' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+      <a class="silk-tlink silk-member-lk" href="{{ section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
     {%- endif -%}
     {%- if section.settings.footnote != blank -%}
       <p class="silk-member-footnote">{{ section.settings.footnote }}</p>
