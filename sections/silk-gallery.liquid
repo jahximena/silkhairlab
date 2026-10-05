@@ -6,7 +6,8 @@
         <p class="silk-gtext">{{ section.settings.subtext }}</p>
       {%- endif -%}
       {%- if section.settings.link_label != blank -%}
-        <a class="silk-tlink" href="{{ section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}" style="color:#4F191D">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+        {%- assign silk_link_href = section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' -%}
+        <a class="silk-tlink" href="{{ silk_link_href }}"{% if silk_link_href contains '://' %} target="_blank" rel="noopener"{% endif %} style="color:#4F191D">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
       {%- endif -%}
     </div>
   </div>

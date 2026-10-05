@@ -2,7 +2,7 @@
   assign heading = section.settings.heading
   assign subheading = section.settings.subheading
   assign button_label = section.settings.button_label
-  assign button_link = section.settings.button_link
+  assign button_link = section.settings.button_link | default: 'https://www.phorest.com/salon/silkhairlab'
   assign tlink_label = section.settings.tlink_label
   assign tlink_link = section.settings.tlink_link
   assign image = section.settings.image
@@ -51,7 +51,8 @@
       {%- if button_label != blank -%}
         <a
           class="silk-btn silk-btn-paper"
-          href="{{ button_link | default: 'https://www.phorest.com/salon/silkhairlab' }}"
+          href="{{ button_link }}"
+          {% if button_link contains '://' %}target="_blank" rel="noopener"{% endif %}
           style="
             margin-top: {{ section.settings.button_margin_top | default: 0 }}px;
             margin-right: {{ section.settings.button_margin_right | default: 0 }}px;

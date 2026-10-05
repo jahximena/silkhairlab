@@ -37,10 +37,12 @@
     {%- endcase -%}
     {%- if section.settings.body != blank -%}<p>{{ section.settings.body }}</p>{%- endif -%}
     {%- if section.settings.button_label != blank -%}
+      {%- assign silk_link_href = section.settings.button_link | default: 'https://www.phorest.com/salon/silkhairlab' -%}
       <div class="silk-cta">
         <a
           class="silk-btn silk-book-btn"
-          href="{{ section.settings.button_link | default: 'https://www.phorest.com/salon/silkhairlab' }}"
+          href="{{ silk_link_href }}"
+          {% if silk_link_href contains '://' %}target="_blank" rel="noopener"{% endif %}
           style="
             --silk-book-btn-bg: {{ section.settings.button_bg | default: '#F0EAE4' }};
             --silk-book-btn-bg-hover: {{ section.settings.button_bg_hover | default: '#ffffff' }};

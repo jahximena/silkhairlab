@@ -31,7 +31,8 @@
         {%- if block.settings.stat != blank -%}<div class="silk-st">{{ block.settings.stat }}</div>{%- endif -%}
         <div class="silk-lb">{{ block.settings.body }}</div>
         {%- if block.settings.link_label != blank -%}
-          <a class="silk-tlink silk-lk" href="{{ block.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}">{{ block.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+          {%- assign silk_link_href = block.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' -%}
+          <a class="silk-tlink silk-lk" href="{{ silk_link_href }}"{% if silk_link_href contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ block.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
         {%- endif -%}
       </div>
     </div>

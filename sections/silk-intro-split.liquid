@@ -6,9 +6,11 @@
     <div class="silk-intro-body">
       <div class="silk-intro-copy">{{ section.settings.body }}</div>
       {%- if section.settings.link_label != blank -%}
+        {%- assign silk_link_href = section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' -%}
         <a
           class="silk-tlink silk-intro-lk"
-          href="{{ section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}"
+          href="{{ silk_link_href }}"
+          {% if silk_link_href contains '://' %}target="_blank" rel="noopener"{% endif %}
           style="margin-top: {{ section.settings.link_margin_top | default: 8 }}px;"
         >{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
       {%- endif -%}

@@ -12,7 +12,8 @@
       {{ section.settings.body }}
     </div>
     {%- if section.settings.link_label != blank -%}
-      <a class="silk-tlink silk-more" href="{{ section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}">{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+      {%- assign silk_link_href = section.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' -%}
+      <a class="silk-tlink silk-more" href="{{ silk_link_href }}"{% if silk_link_href contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ section.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
     {%- endif -%}
   </div>
 </section>

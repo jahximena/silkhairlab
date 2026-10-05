@@ -44,7 +44,8 @@
           <div class="silk-tplaceholder-copy">{{ block.settings.body }}</div>
         {%- endif -%}
         {%- if block.settings.link_label != blank -%}
-          <a class="silk-tlink silk-tplaceholder-lk" href="{{ block.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' }}">{{ block.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
+          {%- assign silk_link_href = block.settings.link_url | default: 'https://www.phorest.com/salon/silkhairlab' -%}
+          <a class="silk-tlink silk-tplaceholder-lk" href="{{ silk_link_href }}"{% if silk_link_href contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ block.settings.link_label }} <span class="silk-ar">&rarr;</span></a>
         {%- endif -%}
       </div>
     </div>
