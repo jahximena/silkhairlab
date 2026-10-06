@@ -1,10 +1,18 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero": {
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
-        "image": "",
         "fallback_asset": "silk-services-hero.jpg",
         "fallback_alt": "A wet cut being shaped at Silk Hair Lab",
         "eyebrow": "",
@@ -76,10 +84,14 @@
           }
         }
       },
-      "block_order": ["t1", "t2", "t3", "t4"],
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
       "settings": {
         "variant": "wine",
-        "image": "",
         "fallback_asset": "silk-scalp-exam.jpg",
         "fallback_alt": "A scalp examined under magnification",
         "fallback_width": 955,
@@ -95,7 +107,7 @@
         "secondary_body": "",
         "footnote": "",
         "link_label": "Book the Diagnostic Ritual",
-        "link_url": "https://www.phorest.com/salon/silkhairlab"
+        "link_url": "http://phore.st/Hw21U"
       }
     },
     "cutting": {
@@ -116,10 +128,12 @@
           }
         }
       },
-      "block_order": ["c1", "c2"],
+      "block_order": [
+        "c1",
+        "c2"
+      ],
       "settings": {
         "variant": "paper",
-        "image": "",
         "fallback_asset": "silk-cutting.jpg",
         "fallback_alt": "A precision cut in progress",
         "fallback_width": 820,
@@ -177,10 +191,15 @@
           }
         }
       },
-      "block_order": ["b1", "b2", "b3", "b4", "b5"],
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
       "settings": {
         "variant": "paper",
-        "image": "",
         "fallback_asset": "silk-blowwave-styling.jpg",
         "fallback_alt": "A blow wave being finished with a straightener",
         "fallback_width": 955,
@@ -238,10 +257,15 @@
           }
         }
       },
-      "block_order": ["co1", "co2", "co3", "co4", "co5"],
+      "block_order": [
+        "co1",
+        "co2",
+        "co3",
+        "co4",
+        "co5"
+      ],
       "settings": {
         "variant": "paper",
-        "image": "",
         "fallback_asset": "silk-colour-foils.jpg",
         "fallback_alt": "Foils being placed at Silk Hair Lab",
         "fallback_width": 1200,
@@ -313,10 +337,17 @@
           }
         }
       },
-      "block_order": ["bl1", "bl2", "bl3", "bl4", "bl5", "bl6", "bl7"],
+      "block_order": [
+        "bl1",
+        "bl2",
+        "bl3",
+        "bl4",
+        "bl5",
+        "bl6",
+        "bl7"
+      ],
       "settings": {
         "variant": "wine",
-        "image": "",
         "fallback_asset": "silk-blonde-waves.jpg",
         "fallback_alt": "Long blonde hair finished in soft waves",
         "fallback_width": 1200,
@@ -388,10 +419,17 @@
           }
         }
       },
-      "block_order": ["e1", "e2", "e3", "e4", "e5", "e6", "e7"],
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4",
+        "e5",
+        "e6",
+        "e7"
+      ],
       "settings": {
         "variant": "paper",
-        "image": "",
         "fallback_asset": "silk-extensions-weft.jpg",
         "fallback_alt": "A weft of extension hair held up",
         "fallback_width": 955,
@@ -415,26 +453,42 @@
       "blocks": {
         "p1": {
           "type": "perk",
-          "settings": { "perk": "A blow wave every Friday" }
+          "settings": {
+            "perk": "A blow wave every Friday"
+          }
         },
         "p2": {
           "type": "perk",
-          "settings": { "perk": "20% off the Hair Lab Heads experience" }
+          "settings": {
+            "perk": "20% off the Hair Lab Heads experience"
+          }
         },
         "p3": {
           "type": "perk",
-          "settings": { "perk": "15% off any colour service" }
+          "settings": {
+            "perk": "15% off any colour service"
+          }
         },
         "p4": {
           "type": "perk",
-          "settings": { "perk": "10% off retail" }
+          "settings": {
+            "perk": "10% off retail"
+          }
         },
         "p5": {
           "type": "perk",
-          "settings": { "perk": "One luxury treatment vial" }
+          "settings": {
+            "perk": "One luxury treatment vial"
+          }
         }
       },
-      "block_order": ["p1", "p2", "p3", "p4", "p5"],
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5"
+      ],
       "settings": {
         "color_scheme": "wine",
         "eyebrow": "Every Friday, 6.30am to 1.30pm",
@@ -513,7 +567,17 @@
           }
         }
       },
-      "block_order": ["q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9"],
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
       "settings": {
         "anchor_id": "questions",
         "heading": "<p>The questions <em>we get most.</em></p>",
