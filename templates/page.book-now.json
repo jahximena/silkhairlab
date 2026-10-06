@@ -14,6 +14,8 @@
       "settings": {
         "anchor_id": "top",
         "image": "shopify://shop_images/book-hero-1Apvivz9.jpg",
+        "fallback_asset": "",
+        "fallback_alt": "",
         "eyebrow": "Book now",
         "heading": "<p>Book <em>Now</em></p>",
         "subheading": "Start with a conversation.",
@@ -80,6 +82,7 @@
         "anchor_id": "",
         "image": "shopify://shop_images/first-visit-consult-I3hcZWQQ.jpg",
         "image_alt": "A stylist consulting with a client before her appointment",
+        "fallback_asset": "",
         "image_position": "left",
         "color_scheme": "wine",
         "content_padding_top": 56,
@@ -107,35 +110,42 @@
           "type": "hours_row",
           "settings": {
             "day": "Tuesday",
-            "hours": "[hours]"
+            "hours": "12PM - 5PM"
           }
         },
         "wed": {
           "type": "hours_row",
           "settings": {
             "day": "Wednesday",
-            "hours": "[hours]"
+            "hours": "9AM - 8PM"
           }
         },
         "thu": {
           "type": "hours_row",
           "settings": {
             "day": "Thursday",
-            "hours": "[hours]"
+            "hours": "9AM - 8PM"
+          }
+        },
+        "hours_row_HGnKRp": {
+          "type": "hours_row",
+          "settings": {
+            "day": "",
+            "hours": ""
           }
         },
         "fri": {
           "type": "hours_row",
           "settings": {
             "day": "Friday",
-            "hours": "6.30am to 1.30pm, Blow Wave Club"
+            "hours": "630AM to 230PM, Blow Wave Club"
           }
         },
         "sat": {
           "type": "hours_row",
           "settings": {
             "day": "Saturday",
-            "hours": "[hours]"
+            "hours": "(open on request)"
           }
         },
         "sun": {
@@ -151,6 +161,7 @@
         "tue",
         "wed",
         "thu",
+        "hours_row_HGnKRp",
         "fri",
         "sat",
         "sun"
@@ -168,6 +179,8 @@
         "hours_heading": "Opening hours",
         "parking_heading": "Parking",
         "parking_body": "[One sentence on where to park.]",
+        "parking_margin_top": 64,
+        "parking_margin_bottom": 0,
         "content_padding_top": 80,
         "content_padding_bottom": 80
       }
