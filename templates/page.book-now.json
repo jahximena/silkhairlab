@@ -99,13 +99,6 @@
     "find_us": {
       "type": "silk-find-us",
       "blocks": {
-        "mon": {
-          "type": "hours_row",
-          "settings": {
-            "day": "Monday",
-            "hours": "[hours]"
-          }
-        },
         "tue": {
           "type": "hours_row",
           "settings": {
@@ -127,13 +120,6 @@
             "hours": "9AM - 8PM"
           }
         },
-        "hours_row_HGnKRp": {
-          "type": "hours_row",
-          "settings": {
-            "day": "",
-            "hours": ""
-          }
-        },
         "fri": {
           "type": "hours_row",
           "settings": {
@@ -147,24 +133,14 @@
             "day": "Saturday",
             "hours": "(open on request)"
           }
-        },
-        "sun": {
-          "type": "hours_row",
-          "settings": {
-            "day": "Sunday",
-            "hours": "[hours]"
-          }
         }
       },
       "block_order": [
-        "mon",
         "tue",
         "wed",
         "thu",
-        "hours_row_HGnKRp",
         "fri",
-        "sat",
-        "sun"
+        "sat"
       ],
       "settings": {
         "anchor_id": "find-us",
