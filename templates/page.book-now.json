@@ -159,6 +159,8 @@
         "anchor_id": "find-us",
         "eyebrow": "Find us",
         "heading": "<p>Come and <em>see us.</em></p>",
+        "form_intro": "Send us a message and we'll get back to you, or book straight through Phorest above.",
+        "submit_label": "Send message",
         "address": "[full address]",
         "phone": "[phone]",
         "email": "[email]",

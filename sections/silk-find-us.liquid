@@ -8,8 +8,57 @@
       <p class="silk-findus-eyebrow">{{ section.settings.eyebrow }}</p>
     {%- endif -%}
     <div class="silk-findus-grid">
-      <div class="silk-findus-col">
+      <div class="silk-findus-col silk-findus-form-col">
         <h2>{{ section.settings.heading }}</h2>
+        {%- if section.settings.form_intro != blank -%}
+          <p class="silk-findus-form-intro">{{ section.settings.form_intro }}</p>
+        {%- endif -%}
+        {%- form 'contact', id: 'ContactForm-find-us', class: 'silk-findus-form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="silk-findus-form-note silk-findus-form-success">Thanks — we'll be in touch soon.</p>
+          {%- elsif form.errors -%}
+            <p class="silk-findus-form-note silk-findus-form-error">{{ form.errors | default_errors }}</p>
+          {%- endif -%}
+          <div class="silk-findus-field">
+            <label for="ContactForm-find-us-name">Name</label>
+            <input
+              type="text"
+              id="ContactForm-find-us-name"
+              name="contact[name]"
+              autocomplete="name"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            >
+          </div>
+          <div class="silk-findus-field">
+            <label for="ContactForm-find-us-email">Email <span aria-hidden="true">*</span></label>
+            <input
+              type="email"
+              id="ContactForm-find-us-email"
+              name="contact[email]"
+              autocomplete="email"
+              autocapitalize="off"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              required
+            >
+          </div>
+          <div class="silk-findus-field">
+            <label for="ContactForm-find-us-phone">Phone</label>
+            <input
+              type="tel"
+              id="ContactForm-find-us-phone"
+              name="contact[phone]"
+              autocomplete="tel"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            >
+          </div>
+          <div class="silk-findus-field">
+            <label for="ContactForm-find-us-body">Message <span aria-hidden="true">*</span></label>
+            <textarea id="ContactForm-find-us-body" name="contact[body]" rows="5" required>{% if form.body %}{{ form.body }}{% endif %}</textarea>
+          </div>
+          <button type="submit" class="silk-findus-submit">{{ section.settings.submit_label | default: 'Send message' }}</button>
+        {%- endform -%}
+      </div>
+      <div class="silk-findus-col">
         <dl class="silk-findus-dl">
           {%- if section.settings.address != blank -%}
             <div class="silk-findus-row">
@@ -36,8 +85,6 @@
             </div>
           {%- endif -%}
         </dl>
-      </div>
-      <div class="silk-findus-col">
         {%- if section.blocks.size > 0 -%}
           <h3>{{ section.settings.hours_heading }}</h3>
           <ul class="silk-findus-hours">
@@ -68,8 +115,8 @@
 .silk-findus-eyebrow{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin:0;}
 
 .silk-findus-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:56px;margin-top:40px;}
-.silk-findus-col:first-child{grid-column:1 / span 5;}
-.silk-findus-col:last-child{grid-column:7 / span 6;}
+.silk-findus-col:first-child{grid-column:1 / span 6;}
+.silk-findus-col:last-child{grid-column:8 / span 5;}
 
 .silk-findus-col h2{
   font-family:var(--font-heading--family);font-weight:320;line-height:1.05;letter-spacing:-.02em;color:#1C1C18;
@@ -77,14 +124,36 @@
 }
 .silk-findus-col h2 em{font-style:italic;}
 
-.silk-findus-dl{margin:40px 0 0;padding:0;display:grid;gap:16px;}
+.silk-findus-form-intro{margin-top:20px;font-family:var(--font-body--family);font-weight:300;font-size:15.5px;line-height:1.68;color:#6f6a63;max-width:48ch;}
+
+.silk-findus-form{margin-top:32px;display:grid;gap:20px;max-width:440px;}
+.silk-findus-field{display:grid;gap:8px;}
+.silk-findus-field label{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.1em;text-transform:uppercase;opacity:.7;}
+.silk-findus-field input,
+.silk-findus-field textarea{
+  font-family:var(--font-body--family);font-size:15px;color:#1C1C18;
+  border:1px solid rgba(28,28,24,.25);background:transparent;padding:12px 14px;border-radius:0;resize:vertical;
+}
+.silk-findus-field input:focus,
+.silk-findus-field textarea:focus{outline:none;border-color:#4F191D;}
+.silk-findus-submit{
+  justify-self:start;display:inline-flex;align-items:center;gap:.6em;
+  font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  padding:17px 34px;border:1px solid transparent;background:#4F191D;color:#F0EAE4;cursor:pointer;transition:.35s;
+}
+.silk-findus-submit:hover{background:#3d1216;}
+.silk-findus-form-note{font-family:var(--font-body--family);font-size:14px;margin:0;padding:12px 14px;}
+.silk-findus-form-success{background:rgba(138,142,104,.15);color:#4f5a2f;}
+.silk-findus-form-error{background:rgba(79,25,29,.08);color:#4F191D;}
+
+.silk-findus-dl{margin:0;padding:0;display:grid;gap:16px;}
 .silk-findus-row{display:flex;flex-direction:column;gap:4px;border-bottom:1px solid rgba(28,28,24,.15);padding-bottom:12px;}
 .silk-findus-row dt{font-family:var(--font-body--family);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin:0;}
 .silk-findus-row dd{font-family:var(--font-body--family);font-size:1.05rem;color:#1C1C18;margin:0;}
 
 .silk-findus-col h3{
   font-family:var(--font-heading--family);font-weight:320;line-height:1.3;color:#1C1C18;
-  font-size:clamp(1.1rem,1.6vw,1.28rem);margin:0;
+  font-size:clamp(1.1rem,1.6vw,1.28rem);margin:40px 0 0;
 }
 .silk-findus-hours{list-style:none;margin:24px 0 0;padding:0;}
 .silk-findus-hours li{display:flex;align-items:baseline;justify-content:space-between;gap:24px;border-bottom:1px solid rgba(28,28,24,.15);padding:12px 0;font-family:var(--font-body--family);font-size:14.5px;color:#6f6a63;}
@@ -131,6 +200,22 @@
       "id": "heading",
       "label": "Heading",
       "default": "<p>Come and <em>see us.</em></p>"
+    },
+    {
+      "type": "header",
+      "content": "Contact form"
+    },
+    {
+      "type": "text",
+      "id": "form_intro",
+      "label": "Form intro line",
+      "info": "A short line above the message form. Leave blank to hide."
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "Submit button label",
+      "default": "Send message"
     },
     {
       "type": "header",
