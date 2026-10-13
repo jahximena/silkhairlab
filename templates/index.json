@@ -13,6 +13,7 @@
       "type": "silk-hero",
       "settings": {
         "anchor_id": "top",
+        "image": "shopify://shop_images/DSC04966.jpg",
         "fallback_asset": "",
         "fallback_alt": "",
         "eyebrow": "",
