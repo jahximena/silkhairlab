@@ -12,7 +12,7 @@
     "hero": {
       "type": "silk-hero",
       "settings": {
-        "anchor_id": "top",
+        "anchor_id": "bottom",
         "image": "shopify://shop_images/DSC04830.jpg",
         "fallback_asset": "silk-services-hero.jpg",
         "fallback_alt": "A wet cut being shaped at Silk Hair Lab",
