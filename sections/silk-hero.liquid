@@ -7,8 +7,8 @@
   assign tlink_link = section.settings.tlink_link
   assign image = section.settings.image
   assign image_alt = image.alt | default: heading | strip_html
-  assign focal_x = image.presentation.focal_point.x | default: 50
-  assign focal_y = image.presentation.focal_point.y | default: 45
+  assign focal_x = section.settings.image_position_x | default: 50
+  assign focal_y = section.settings.image_position_y | default: 45
 %}
 
 <section
@@ -146,6 +146,32 @@
       "type": "text",
       "id": "fallback_alt",
       "label": "Fallback image alt text"
+    },
+    {
+      "type": "header",
+      "content": "Background image position"
+    },
+    {
+      "type": "range",
+      "id": "image_position_x",
+      "label": "Horizontal position",
+      "info": "Which part of the image stays in frame when it's cropped. 0 = left, 100 = right.",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "image_position_y",
+      "label": "Vertical position",
+      "info": "Which part of the image stays in frame when it's cropped. 0 = top, 100 = bottom.",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 45
     },
     {
       "type": "text",

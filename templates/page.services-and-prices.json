@@ -16,6 +16,8 @@
         "image": "shopify://shop_images/DSC04830.jpg",
         "fallback_asset": "silk-services-hero.jpg",
         "fallback_alt": "A wet cut being shaped at Silk Hair Lab",
+        "image_position_x": 50,
+        "image_position_y": 15,
         "eyebrow": "",
         "heading": "<p>Services and <em>Prices</em></p>",
         "subheading": "Everything your hair needs, in one room.",
