@@ -16,6 +16,8 @@
         "image": "shopify://shop_images/DSC04966.jpg",
         "fallback_asset": "",
         "fallback_alt": "",
+        "image_position_x": 50,
+        "image_position_y": 45,
         "eyebrow": "",
         "heading": "<p>Great hair changes <em>everything.</em></p>",
         "subheading": "A hair studio and scalp clinic on the Gold Coast.",
@@ -43,6 +45,7 @@
       "type": "silk-about",
       "settings": {
         "anchor_id": "about",
+        "image": "shopify://shop_images/KELLY_Hero.jpg",
         "image_alt": "Kelly McColgan, founder of Silk Hair Lab",
         "heading": "<p>The salon and the <em>science</em>, under one roof.</p>",
         "body": "<p>Silk was started by Kelly McColgan, who has spent 25 years behind the chair. She began at twelve years old in Ireland, trained in Belfast, and cut her way around the world before landing on the Gold Coast.</p><p>Somewhere in those 25 years she got tired of watching women be handed longer, fuller, faker hair when what they really wanted was to feel like themselves again. So she went and studied the science of hair and scalp health.</p><p>So Silk is a clinic, with real answers about why your hair is doing what it is doing. It is also a Friday morning with rollers in and an iced coffee in your hand.</p><p>Both are the same thing, really. Because when your hair feels right, it helps you feel right.</p>",
