@@ -153,6 +153,7 @@
           "type": "layer",
           "settings": {
             "variant": "paper_rev",
+            "image": "shopify://shop_images/DSC04450.jpg",
             "fallback_asset": "silk-service-hairdressing.jpg",
             "fallback_width": 1100,
             "fallback_height": 1374,
