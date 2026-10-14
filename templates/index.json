@@ -75,6 +75,7 @@
         "g3": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DSC04437.jpg",
             "fallback_asset": "silk-gallery-3.jpg",
             "alt": "Hand-placed extensions"
           }
