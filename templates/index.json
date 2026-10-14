@@ -90,6 +90,7 @@
         "g5": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DSC04564.jpg",
             "fallback_asset": "silk-gallery-5.jpg",
             "alt": "A wet cut being shaped"
           }
