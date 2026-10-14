@@ -433,6 +433,7 @@
       ],
       "settings": {
         "variant": "paper",
+        "image": "shopify://shop_images/Extentions.jpg",
         "fallback_asset": "silk-extensions-weft.jpg",
         "fallback_alt": "A weft of extension hair held up",
         "fallback_width": 955,
