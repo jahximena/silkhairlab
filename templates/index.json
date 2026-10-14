@@ -122,6 +122,7 @@
           "type": "layer",
           "settings": {
             "variant": "paper",
+            "image": "shopify://shop_images/DSC04568.jpg",
             "fallback_asset": "silk-service-lab.jpg",
             "fallback_width": 900,
             "fallback_height": 1350,
