@@ -83,6 +83,7 @@
         "g4": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DSC05033.jpg",
             "fallback_asset": "silk-gallery-4.jpg",
             "alt": "Extension wefts matched to tone"
           }
