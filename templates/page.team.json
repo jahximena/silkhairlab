@@ -16,6 +16,8 @@
         "image": "shopify://shop_images/DSC04973.jpg",
         "fallback_asset": "",
         "fallback_alt": "",
+        "image_position_x": 50,
+        "image_position_y": 45,
         "eyebrow": "",
         "heading": "<p>The <em>Team</em></p>",
         "subheading": "Four chairs. Nobody gets rushed.",
@@ -105,6 +107,7 @@
         "person_2": {
           "type": "person",
           "settings": {
+            "image": "shopify://shop_images/Team_-_Lilly_1.jpg",
             "image_alt": "Lilly Wills, hairdresser at Silk Hair Lab",
             "fallback_asset": "silk-team-lily.jpg",
             "fallback_width": 1333,

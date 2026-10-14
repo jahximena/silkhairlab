@@ -203,6 +203,7 @@
       ],
       "settings": {
         "variant": "paper",
+        "image": "shopify://shop_images/Blow_wave.jpg",
         "fallback_asset": "silk-blowwave-styling.jpg",
         "fallback_alt": "A blow wave being finished with a straightener",
         "fallback_width": 1333,
