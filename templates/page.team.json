@@ -122,6 +122,7 @@
         "person_3": {
           "type": "person",
           "settings": {
+            "image": "shopify://shop_images/Team_-_Makenna_1.jpg",
             "image_alt": "Makenna Bates, hairdresser at Silk Hair Lab",
             "fallback_asset": "silk-team-makenna.jpg",
             "fallback_width": 1333,
