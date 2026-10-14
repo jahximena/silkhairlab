@@ -67,6 +67,7 @@
         "g2": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/DSC04348.jpg",
             "fallback_asset": "silk-gallery-2.jpg",
             "alt": "Two finished colours side by side"
           }
