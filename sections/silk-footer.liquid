@@ -2,7 +2,23 @@
   <div class="silk-wrap">
     <div class="silk-foot">
       <div>
-        <div class="silk-fb">{{ section.settings.brand | default: 'Silk' }}</div>
+        {%- if section.settings.image != blank -%}
+          <div class="silk-fb silk-fb-image">
+            {{ section.settings.image | image_url: width: 600 | image_tag: loading: 'lazy', widths: '200,300,400,600', alt: section.settings.brand | default: 'Silk Hair Lab' }}
+          </div>
+        {%- elsif section.settings.fallback_asset != blank -%}
+          <div class="silk-fb silk-fb-image">
+            <img
+              src="{{ section.settings.fallback_asset | asset_url }}"
+              alt="{{ section.settings.brand | default: 'Silk Hair Lab' }}"
+              width="{{ section.settings.fallback_width | default: 1000 }}"
+              height="{{ section.settings.fallback_height | default: 563 }}"
+              loading="lazy"
+            >
+          </div>
+        {%- else -%}
+          <div class="silk-fb">{{ section.settings.brand | default: 'Silk' }}</div>
+        {%- endif -%}
         <div class="silk-sig">{{ section.settings.signature }}</div>
       </div>
       {%- for block in section.blocks -%}
@@ -24,6 +40,8 @@
 .silk-footer{background:#1C1C18;color:#cfc7bf;}
 .silk-foot{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;padding-top:clamp(72px,8vw,104px);}
 .silk-foot .silk-fb{font-family:var(--font-accent--family);font-style:italic;font-size:42px;color:#F0EAE4;line-height:1;}
+.silk-foot .silk-fb-image{font-size:0;}
+.silk-foot .silk-fb-image img{height:64px;width:auto;display:block;}
 .silk-foot .silk-sig{font-family:var(--font-accent--family);font-style:italic;font-size:20px;color:#e7ddd4;margin-top:22px;max-width:24ch;line-height:1.4;}
 .silk-foot h5{font-family:var(--font-body--family);font-weight:500;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#8A8E68;margin-bottom:16px;}
 .silk-foot-list{font-family:var(--font-body--family);font-weight:300;}
@@ -49,9 +67,31 @@
   "name": "Silk footer",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Wordmark image (optional)",
+      "info": "Replaces the text wordmark below when set."
+    },
+    {
+      "type": "text",
+      "id": "fallback_asset",
+      "label": "Fallback wordmark asset (leave as-is)"
+    },
+    {
+      "type": "number",
+      "id": "fallback_width",
+      "label": "Fallback asset width (leave as-is)"
+    },
+    {
+      "type": "number",
+      "id": "fallback_height",
+      "label": "Fallback asset height (leave as-is)"
+    },
+    {
       "type": "text",
       "id": "brand",
-      "label": "Wordmark",
+      "label": "Wordmark (text fallback)",
+      "info": "Shown only when no wordmark image is set above.",
       "default": "Silk"
     },
     {

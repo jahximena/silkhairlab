@@ -43,6 +43,9 @@
       ],
       "name": "Silk footer",
       "settings": {
+        "fallback_asset": "silk-logo-footer.png",
+        "fallback_width": 1000,
+        "fallback_height": 563,
         "brand": "Silk",
         "signature": "When your hair feels right, it helps you feel right.",
         "tagline": "Strong body. Good hair. Good mood.",
