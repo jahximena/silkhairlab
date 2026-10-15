@@ -23,7 +23,7 @@
         "subheading": "A hair studio and scalp clinic on the Gold Coast.",
         "body": "",
         "button_label": "Book an appointment",
-        "button_link": "https://www.phorest.com/salon/silkhairlab",
+        "button_link": "shopify://pages/book-now",
         "tlink_label": "Hair loss and scalp health",
         "tlink_link": "https://www.phorest.com/salon/silkhairlab",
         "height_vh": 100,
