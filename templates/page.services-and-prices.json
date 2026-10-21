@@ -352,6 +352,7 @@
       ],
       "settings": {
         "variant": "wine",
+        "image": "shopify://shop_images/WhatsApp_Image_2026-10-21_at_4.23.38_AM.jpg",
         "fallback_asset": "silk-blonde-waves.jpg",
         "fallback_alt": "Long blonde hair finished in soft waves",
         "fallback_width": 1200,
