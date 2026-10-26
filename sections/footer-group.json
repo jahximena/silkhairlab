@@ -18,21 +18,21 @@
           "type": "column",
           "settings": {
             "heading": "Visit",
-            "items": "<ul><li>Gold Coast</li><li><em>Full address to confirm</em></li><li><em>Opening hours to confirm</em></li></ul>"
+            "items": "<ul><li><em>Shop 3/36 Pacific Ave, Miami QLD 4220</em></li><li><em>Opening hours to confirm</em></li></ul>"
           }
         },
         "column_contact": {
           "type": "column",
           "settings": {
             "heading": "Contact",
-            "items": "<ul><li><em>Phone to confirm</em></li><li><em>Email to confirm</em></li></ul>"
+            "items": "<ul><li><em>0422 822 400</em></li><li><em>hello@silk-hairlab.com</em></li></ul>"
           }
         },
         "column_follow": {
           "type": "column",
           "settings": {
             "heading": "Follow",
-            "items": "<ul><li><em>Instagram to confirm</em></li></ul>"
+            "items": "<p><em>@silk_hairlab_miami</em></p>"
           }
         }
       },
