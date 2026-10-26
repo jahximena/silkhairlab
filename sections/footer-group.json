@@ -25,14 +25,14 @@
           "type": "column",
           "settings": {
             "heading": "Contact",
-            "items": "<ul><li><em>0422 822 400</em></li><li><em>hello@silk-hairlab.com</em></li></ul>"
+            "items": "<ul><li><em>0422 822 400</em></li><li><em><a href=\"mailto:hello@silk-hairlab.com\">hello@silk-hairlab.com</a></em></li></ul>"
           }
         },
         "column_follow": {
           "type": "column",
           "settings": {
             "heading": "Follow",
-            "items": "<p><em>@silk_hairlab_miami</em></p>"
+            "items": "<p><em><a href=\"https://www.instagram.com/silk_hairlab_miami/\">@silk_hairlab_miami</a></em></p>"
           }
         }
       },
