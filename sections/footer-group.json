@@ -18,7 +18,7 @@
           "type": "column",
           "settings": {
             "heading": "Visit",
-            "items": "<ul><li><em>Shop 3/36 Pacific Ave, Miami QLD 4220</em></li><li><em>Opening hours to confirm</em></li></ul>"
+            "items": "<ul><li><em>Shop 3/36 Pacific Ave, Miami QLD 4220</em></li></ul>"
           }
         },
         "column_contact": {
